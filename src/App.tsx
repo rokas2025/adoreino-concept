@@ -1,0 +1,37 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
+import { Layout } from './components/Layout'
+import { Dashboard } from './pages/Dashboard'
+import { Login } from './pages/Login'
+import { CodeAnalyst } from './pages/modules/CodeAnalyst'
+import { ContentAnalyst } from './pages/modules/ContentAnalyst'
+import { AutoProgrammer } from './pages/modules/AutoProgrammer'
+import { ContentCreator } from './pages/modules/ContentCreator'
+import { Settings } from './pages/Settings'
+import { Projects } from './pages/Projects'
+import { ProtectedRoute } from './components/ProtectedRoute'
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+          <Route index element={<Dashboard />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="modules">
+            <Route path="code-analyst" element={<CodeAnalyst />} />
+            <Route path="content-analyst" element={<ContentAnalyst />} />
+            <Route path="auto-programmer" element={<AutoProgrammer />} />
+            <Route path="content-creator" element={<ContentCreator />} />
+          </Route>
+          <Route path="settings" element={<Settings />} />
+        </Route>
+      </Routes>
+      <Toaster />
+    </>
+  )
+}
+
+export default App 
