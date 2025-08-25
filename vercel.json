@@ -26,7 +26,8 @@
       ]
     }
   ],
-  "rewrites": [
-    { "source": "/((?!api/|.*\\..*).*)", "destination": "/" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/" }
   ]
 } 
