@@ -12,5 +12,13 @@ export default defineConfig({
     outDir: 'dist',
     target: 'es2020',
     minify: 'esbuild'
+  },
+  esbuild: {
+    // Disable type checking during build
+    target: 'es2020'
+  },
+  define: {
+    // Ensure process.env is available
+    'process.env': {}
   }
 }) 
