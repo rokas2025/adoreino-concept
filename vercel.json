@@ -1,4 +1,7 @@
 {
+  "buildCommand": "npx vite build --config vite.config.vercel.ts",
+  "outputDirectory": "dist",
+  "framework": "vite",
   "functions": {
     "api/fetch-url.js": {
       "maxDuration": 30

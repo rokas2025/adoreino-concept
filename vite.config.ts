@@ -28,11 +28,22 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    target: 'es2015',
+    target: 'esnext',
+    minify: 'esbuild',
     rollupOptions: {
+      external: (id: string) => {
+        // Exclude all commonjs-external modules that cause issues on Vercel
+        if (id.indexOf('?commonjs-external') !== -1) return true
+        if (id.indexOf('core-js/internals') !== -1) return true
+        if (id.indexOf('define-globalThis') !== -1) return true
+        return false
+      },
       output: {
         manualChunks: undefined
       }
     }
+  },
+  esbuild: {
+    target: 'esnext'
   },
 })
