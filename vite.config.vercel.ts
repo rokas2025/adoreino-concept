@@ -11,18 +11,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     target: 'es2020',
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-        }
-      }
-    }
-  },
-  define: {
-    'process.env.NODE_ENV': '"production"'
+    minify: 'esbuild'
   }
 }) 
