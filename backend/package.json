@@ -17,7 +17,8 @@
     "docker:build": "docker build -t codeanalyst-backend .",
     "docker:run": "docker run -p 3001:3001 codeanalyst-backend",
     "audit:fix": "npm audit fix --force",
-    "update:check": "npm outdated"
+    "update:check": "npm outdated",
+    "build:vercel": "cd .. && npm run build:vercel"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.9.1",
