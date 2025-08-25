@@ -1,9 +1,16 @@
 {
+  "version": 2,
   "buildCommand": "npm run build:vercel",
-  "outputDirectory": "dist",
+  "outputDirectory": "./dist",
+  "installCommand": "npm ci",
   "functions": {
     "api/fetch-url.js": {
       "maxDuration": 30
+    }
+  },
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
   },
   "rewrites": [
