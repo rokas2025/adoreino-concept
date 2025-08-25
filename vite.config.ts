@@ -1,18 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': '/src',
     },
   },
   server: {
     port: 3000,
     open: true,
-    host: true, // Allow external connections
+    host: true,
     allowedHosts: [
       'localhost',
       '.ngrok.io',
@@ -21,27 +20,19 @@ export default defineConfig({
     ],
     proxy: {
       '/api': {
-        target: 'http://localhost:3002', // your backend
+        target: 'http://localhost:3002',
         changeOrigin: true,
-        secure: false, // in case of self-signed certs
+        secure: false,
       },
     },
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    target: 'es2015',
     rollupOptions: {
-      external: (id) => {
-        // Handle problematic external dependencies
-        if (id.includes('define-globalThis-property')) return true
-        return false
+      output: {
+        manualChunks: undefined
       }
     }
-  },
-  define: {
-    global: 'globalThis',
-  },
-  optimizeDeps: {
-    exclude: ['@assistant-ui/react', '@assistant-ui/react-ai-sdk', '@assistant-ui/react-ui']
   },
 })
