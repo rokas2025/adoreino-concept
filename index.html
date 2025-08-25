@@ -10,61 +10,174 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
-      (function(){
-        try {
-          console.info('[HTML] location', window.location.href)
-          console.info('[HTML] userAgent', navigator.userAgent)
-          console.info('[HTML] supports module?', typeof document.createElement('script').noModule === 'boolean')
-          
-          // Show we got this far
-          setTimeout(function() {
-            var root = document.getElementById('root')
-            if (root && (!root.innerHTML || root.innerHTML.trim() === '')) {
-              root.innerHTML = '<div style="padding:20px;font-family:system-ui;color:red;background:#fff;border:2px solid red;">⚠️ EMERGENCY: React failed to mount. Check console for JS errors.</div>'
-              console.error('[HTML] React mount failed - showing emergency fallback')
-            }
-          }, 3000)
-        } catch (e) {
-          console.error('[HTML] early error', e)
+      console.log('=== DEBUG: HTML HEAD LOADED ===')
+      console.log('Location:', window.location.href)
+      console.log('User Agent:', navigator.userAgent)
+      console.log('Module support:', 'noModule' in document.createElement('script'))
+      
+      // Show every step
+      window.debugSteps = []
+      window.addDebugStep = function(step) {
+        window.debugSteps.push(step)
+        console.log('🔍 STEP:', step)
+        
+        // Also show on page
+        var debugDiv = document.getElementById('debug-output')
+        if (debugDiv) {
+          debugDiv.innerHTML = window.debugSteps.map(s => '• ' + s).join('<br>')
         }
-      })();
+      }
+      
+      window.addDebugStep('HTML head script executed')
     </script>
     <style>
-      #root { min-height: 100vh; }
+      #root { min-height: 100vh; position: relative; }
+      #debug-output { 
+        position: fixed; 
+        top: 10px; 
+        right: 10px; 
+        background: #000; 
+        color: #0f0; 
+        padding: 10px; 
+        font-family: monospace; 
+        font-size: 12px; 
+        z-index: 9999; 
+        max-width: 300px;
+        border: 1px solid #0f0;
+      }
       #root:empty::before {
-        content: "🔄 Loading React app...";
+        content: "🔄 INITIALIZING...";
         display: block;
         padding: 20px;
         background: #f0f9ff;
         border: 1px solid #0ea5e9;
         font-family: system-ui;
         color: #0c4a6e;
+        text-align: center;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
+    <div id="debug-output">• Starting...</div>
     <div id="root"></div>
+    
     <script>
-      // BYPASS VERCEL MIME ISSUE: Load main script dynamically
+      console.log('=== DEBUG: BODY SCRIPT STARTED ===')
+      window.addDebugStep('Body script started')
+      
+      // Emergency fallback after 5 seconds
+      setTimeout(function() {
+        window.addDebugStep('5 second timeout reached')
+        var root = document.getElementById('root')
+        if (root && (!root.innerHTML || root.innerHTML.trim() === '')) {
+          root.innerHTML = '<div style="padding:20px;font-family:system-ui;color:red;background:#fff;border:2px solid red;"><h2>❌ FAILURE ANALYSIS</h2><p>React failed to mount after 5 seconds.</p><p>Steps completed: ' + window.debugSteps.length + '</p><p>Check console for detailed logs.</p></div>'
+          console.error('=== FAILURE: React did not mount ===')
+          console.error('Steps:', window.debugSteps)
+        }
+      }, 5000)
+      
       window.addEventListener('DOMContentLoaded', function() {
-        fetch('/src/main.tsx')
-          .then(response => response.text())
-          .then(code => {
-            console.log('[BYPASS] Got main.tsx source, creating script element')
-            const script = document.createElement('script')
-            script.type = 'module'
-            script.textContent = code
-            document.head.appendChild(script)
+        window.addDebugStep('DOMContentLoaded fired')
+        
+        // Check if we're in production (built) or development
+        var isBuilt = !document.querySelector('script[src="/src/main.tsx"]')
+        window.addDebugStep('Environment: ' + (isBuilt ? 'BUILT/PRODUCTION' : 'DEVELOPMENT'))
+        
+        if (isBuilt) {
+          // Production: try to load built assets
+          window.addDebugStep('Looking for built assets...')
+          
+          // Check what script tags exist
+          var scripts = document.querySelectorAll('script')
+          window.addDebugStep('Found ' + scripts.length + ' script tags')
+          
+          scripts.forEach(function(script, i) {
+            if (script.src) {
+              window.addDebugStep('Script ' + i + ': ' + script.src)
+            }
           })
-          .catch(error => {
-            console.error('[BYPASS] Failed to load main.tsx:', error)
-            // Fallback: try the regular method
-            const script = document.createElement('script')
-            script.type = 'module'
-            script.src = '/src/main.tsx'
-            document.head.appendChild(script)
-          })
+          
+          // Try to find main JS file in assets
+          fetch('/assets/')
+            .then(function(response) {
+              window.addDebugStep('Assets folder response: ' + response.status)
+              return response.text()
+            })
+            .then(function(html) {
+              window.addDebugStep('Assets folder contains: ' + html.substring(0, 100) + '...')
+              
+              // Look for JS files
+              var jsMatch = html.match(/index-[a-f0-9]+\.js/g)
+              if (jsMatch) {
+                var jsFile = '/assets/' + jsMatch[0]
+                window.addDebugStep('Found JS file: ' + jsFile)
+                
+                // Load it
+                var script = document.createElement('script')
+                script.type = 'module'
+                script.src = jsFile
+                script.onload = function() {
+                  window.addDebugStep('✅ Built JS loaded successfully')
+                }
+                script.onerror = function(e) {
+                  window.addDebugStep('❌ Built JS failed to load: ' + e)
+                  console.error('Script load error:', e)
+                }
+                document.head.appendChild(script)
+              } else {
+                window.addDebugStep('❌ No JS files found in assets')
+              }
+            })
+            .catch(function(error) {
+              window.addDebugStep('❌ Assets fetch failed: ' + error)
+              console.error('Assets fetch error:', error)
+            })
+            
+        } else {
+          // Development: load source files
+          window.addDebugStep('Loading development source...')
+          
+          fetch('/src/main.tsx')
+            .then(function(response) {
+              window.addDebugStep('main.tsx response: ' + response.status)
+              if (!response.ok) throw new Error('HTTP ' + response.status)
+              return response.text()
+            })
+            .then(function(code) {
+              window.addDebugStep('Got main.tsx source (' + code.length + ' chars)')
+              var script = document.createElement('script')
+              script.type = 'module'
+              script.textContent = code
+              script.onload = function() {
+                window.addDebugStep('✅ Source script executed')
+              }
+              script.onerror = function(e) {
+                window.addDebugStep('❌ Source script error: ' + e)
+              }
+              document.head.appendChild(script)
+            })
+            .catch(function(error) {
+              window.addDebugStep('❌ main.tsx fetch failed: ' + error)
+              console.error('main.tsx fetch error:', error)
+              
+              // Final fallback
+              window.addDebugStep('Trying fallback method...')
+              var script = document.createElement('script')
+              script.type = 'module'
+              script.src = '/src/main.tsx'
+              script.onload = function() {
+                window.addDebugStep('✅ Fallback script loaded')
+              }
+              script.onerror = function(e) {
+                window.addDebugStep('❌ Fallback script failed: ' + e)
+              }
+              document.head.appendChild(script)
+            })
+        }
       })
+      
+      window.addDebugStep('Event listeners set up')
     </script>
   </body>
 </html> 
