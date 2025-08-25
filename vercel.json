@@ -25,5 +25,8 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/((?!api/|.*\\..*).*)", "destination": "/" }
   ]
 } 
