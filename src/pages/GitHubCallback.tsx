@@ -6,38 +6,38 @@ import { CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/24/ou
 export function GitHubCallback() {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
-  const { handleGitHubCallback } = useAuthStore()
+  const { set_token } = useAuthStore()
   const [status, setStatus] = useState<'processing' | 'success' | 'error'>('processing')
   const [error, setError] = useState<string>('')
 
   useEffect(() => {
     const processCallback = async () => {
       try {
-        const code = searchParams.get('code')
-        const state = searchParams.get('state')
-        const error = searchParams.get('error')
+        const token = searchParams.get('token')
+        const oauthError = searchParams.get('error')
 
-        if (error) {
-          throw new Error(`GitHub OAuth error: ${error}`)
+        if (oauthError) {
+          throw new Error(`GitHub OAuth error: ${oauthError}`)
         }
 
-        if (!code || !state) {
-          throw new Error('Missing authorization code or state parameter')
+        if (!token) {
+          throw new Error('Missing token in callback URL')
         }
 
-        await handleGitHubCallback(code, state)
+        // Store token in auth store
+        set_token(token)
         setStatus('success')
-        
+
         // Redirect to dashboard after success
         setTimeout(() => {
-          navigate('/dashboard')
+          navigate('/')
         }, 2000)
 
       } catch (err) {
         console.error('GitHub OAuth callback error:', err)
         setError(err instanceof Error ? err.message : 'OAuth authentication failed')
         setStatus('error')
-        
+
         // Redirect to login after error
         setTimeout(() => {
           navigate('/login')
@@ -46,7 +46,7 @@ export function GitHubCallback() {
     }
 
     processCallback()
-  }, [searchParams, handleGitHubCallback, navigate])
+  }, [searchParams, set_token, navigate])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -80,4 +80,4 @@ export function GitHubCallback() {
       </div>
     </div>
   )
-} 
+}

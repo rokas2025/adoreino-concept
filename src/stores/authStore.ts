@@ -4,10 +4,11 @@ import { AuthState, User } from '../types'
 interface AuthStore extends AuthState {
   login: (email: string, password: string) => Promise<void>
   loginWithGitHub: () => Promise<void>
-  handleGitHubCallback: (code: string, state: string) => Promise<any>
+  handleGitHubCallback: (code: string, state: string) => Promise<User>
   logout: () => void
   updateUser: (user: Partial<User>) => void
   checkAuth: () => Promise<void>
+  set_token: (token: string) => void
 }
 
 export const useAuthStore = create<AuthStore>((set, get) => ({
@@ -15,13 +16,16 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
   isAuthenticated: false,
   loading: true,
 
+  set_token: (token: string) => {
+    localStorage.setItem('auth_token', token)
+    set({ isAuthenticated: true, loading: false })
+  },
+
   login: async (email: string, password: string) => {
     set({ loading: true })
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // Mock user for demo
+
       const mockUser: User = {
         id: '1',
         email,
@@ -32,13 +36,12 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
         updatedAt: new Date().toISOString(),
       }
 
-      set({ 
-        user: mockUser, 
-        isAuthenticated: true, 
-        loading: false 
+      set({
+        user: mockUser,
+        isAuthenticated: true,
+        loading: false
       })
-      
-      // Store in localStorage for persistence
+
       localStorage.setItem('auth_token', 'mock_token')
       localStorage.setItem('user', JSON.stringify(mockUser))
     } catch (error) {
@@ -50,21 +53,14 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
   loginWithGitHub: async () => {
     set({ loading: true })
     try {
-      // Get GitHub OAuth URL from backend
       const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3002/api'
       const response = await fetch(`${baseUrl}/auth/github`)
       const data = await response.json()
-      
-      if (!data.success) {
-        throw new Error(data.error || 'Failed to initiate GitHub OAuth')
-      }
 
-      // Store state for verification
+      if (!data.success) throw new Error(data.error || 'Failed to initiate GitHub OAuth')
+
       localStorage.setItem('github_oauth_state', data.state)
-      
-      // Redirect to GitHub OAuth
       window.location.href = data.authUrl
-      
     } catch (error) {
       set({ loading: false })
       throw error
@@ -74,41 +70,26 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
   handleGitHubCallback: async (code: string, state: string) => {
     set({ loading: true })
     try {
-      // Verify state parameter
       const storedState = localStorage.getItem('github_oauth_state')
-      if (state !== storedState) {
-        throw new Error('Invalid OAuth state parameter')
-      }
+      if (state !== storedState) throw new Error('Invalid OAuth state parameter')
 
-      // Exchange code for token
       const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3002/api'
       const response = await fetch(`${baseUrl}/auth/github/callback`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, state })
       })
 
       const data = await response.json()
-      
-      if (!data.success) {
-        throw new Error(data.error || 'GitHub OAuth failed')
-      }
+      if (!data.success) throw new Error(data.error || 'GitHub OAuth failed')
 
-      // Store auth data
       localStorage.setItem('auth_token', data.token)
       localStorage.setItem('user', JSON.stringify(data.user))
       localStorage.removeItem('github_oauth_state')
 
-      set({ 
-        user: data.user, 
-        isAuthenticated: true, 
-        loading: false 
-      })
+      set({ user: data.user, isAuthenticated: true, loading: false })
 
       return data.user
-
     } catch (error) {
       set({ loading: false })
       localStorage.removeItem('github_oauth_state')
@@ -117,11 +98,7 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
   },
 
   logout: () => {
-    set({ 
-      user: null, 
-      isAuthenticated: false, 
-      loading: false 
-    })
+    set({ user: null, isAuthenticated: false, loading: false })
     localStorage.removeItem('auth_token')
     localStorage.removeItem('user')
   },
@@ -140,22 +117,18 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
     try {
       const token = localStorage.getItem('auth_token')
       const userData = localStorage.getItem('user')
-      
+
       if (token && userData) {
         const user = JSON.parse(userData)
-        set({ 
-          user, 
-          isAuthenticated: true, 
-          loading: false 
-        })
+        set({ user, isAuthenticated: true, loading: false })
       } else {
         set({ loading: false })
       }
-    } catch (error) {
+    } catch {
       set({ loading: false })
     }
   },
 }))
 
-// Initialize auth check on store creation
-useAuthStore.getState().checkAuth() 
+// Run auth check immediately
+useAuthStore.getState().checkAuth()
