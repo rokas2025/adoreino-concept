@@ -15,11 +15,32 @@
           console.info('[HTML] location', window.location.href)
           console.info('[HTML] userAgent', navigator.userAgent)
           console.info('[HTML] supports module?', typeof document.createElement('script').noModule === 'boolean')
+          
+          // Show we got this far
+          setTimeout(function() {
+            var root = document.getElementById('root')
+            if (root && (!root.innerHTML || root.innerHTML.trim() === '')) {
+              root.innerHTML = '<div style="padding:20px;font-family:system-ui;color:red;background:#fff;border:2px solid red;">⚠️ EMERGENCY: React failed to mount. Check console for JS errors.</div>'
+              console.error('[HTML] React mount failed - showing emergency fallback')
+            }
+          }, 3000)
         } catch (e) {
           console.error('[HTML] early error', e)
         }
       })();
     </script>
+    <style>
+      #root { min-height: 100vh; }
+      #root:empty::before {
+        content: "🔄 Loading React app...";
+        display: block;
+        padding: 20px;
+        background: #f0f9ff;
+        border: 1px solid #0ea5e9;
+        font-family: system-ui;
+        color: #0c4a6e;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
