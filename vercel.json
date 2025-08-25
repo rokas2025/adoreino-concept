@@ -1,7 +1,7 @@
 {
-  "buildCommand": "npm ci && npx vite build --config vite.config.vercel.ts",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm ci --legacy-peer-deps",
+  "framework": "vite",
   "functions": {
     "api/fetch-url.js": {
       "maxDuration": 30
