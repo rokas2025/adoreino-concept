@@ -1,4 +1,6 @@
 import { AdoreInoResults } from '../types'
+import jsPDF from 'jspdf'
+import html2canvas from 'html2canvas'
 
 export interface PDFExportOptions {
   title?: string
@@ -323,4 +325,301 @@ export async function exportExecutiveReport(results: AdoreInoResults): Promise<v
     format: 'executive',
     includeTechnicalDetails: false
   })
+}
+
+export const exportAnalysisToPDF = async (analysisId: string, analysisData: any): Promise<{ success: boolean; filename: string }> => {
+  try {
+    // Create a clean version of the content for PDF export
+    const contentElement = document.querySelector('#analysis-report') as HTMLElement
+    
+    if (!contentElement) {
+      throw new Error('Content not found for PDF export')
+    }
+
+    // Create a temporary container for PDF content
+    const tempContainer = document.createElement('div')
+    tempContainer.style.position = 'absolute'
+    tempContainer.style.left = '-9999px'
+    tempContainer.style.top = '0'
+    tempContainer.style.width = '800px' // Fixed width for better control
+    tempContainer.style.maxWidth = '800px'
+    tempContainer.style.backgroundColor = 'white'
+    tempContainer.style.padding = '40px'
+    tempContainer.style.fontFamily = 'Arial, sans-serif'
+    tempContainer.style.lineHeight = '1.6'
+    tempContainer.style.fontSize = '14px'
+    
+    // Clone the content and clean it up for PDF
+    const clonedContent = contentElement.cloneNode(true) as HTMLElement
+    
+    // Remove interactive elements and adjust styles for PDF
+    const buttons = clonedContent.querySelectorAll('button')
+    buttons.forEach(button => button.remove())
+    
+    // Remove any hover classes and interactions
+    const hoverElements = clonedContent.querySelectorAll('[class*="hover:"]')
+    hoverElements.forEach(element => {
+      element.className = element.className.replace(/hover:[^\s]*/g, '')
+    })
+    
+    // Adjust styles for PDF
+    const cards = clonedContent.querySelectorAll('.bg-white')
+    cards.forEach(card => {
+      (card as HTMLElement).style.boxShadow = 'none'
+      ;(card as HTMLElement).style.border = '1px solid #e5e7eb'
+      ;(card as HTMLElement).style.marginBottom = '20px'
+      ;(card as HTMLElement).style.pageBreakInside = 'avoid'
+      ;(card as HTMLElement).style.padding = '20px'
+      ;(card as HTMLElement).style.width = '100%'
+      ;(card as HTMLElement).style.boxSizing = 'border-box'
+    })
+    
+    // Style gradients for better PDF printing
+    const gradients = clonedContent.querySelectorAll('[class*="gradient"]')
+    gradients.forEach(gradient => {
+      (gradient as HTMLElement).style.background = '#f8fafc'
+      ;(gradient as HTMLElement).style.border = '1px solid #e2e8f0'
+      ;(gradient as HTMLElement).style.width = '100%'
+      ;(gradient as HTMLElement).style.boxSizing = 'border-box'
+    })
+    
+    // Fix flexbox layouts for PDF
+    const flexElements = clonedContent.querySelectorAll('[class*="flex"]')
+    flexElements.forEach(element => {
+      (element as HTMLElement).style.display = 'block'
+      ;(element as HTMLElement).style.width = '100%'
+    })
+    
+    // Fix grid layouts
+    const gridElements = clonedContent.querySelectorAll('[class*="grid"]')
+    gridElements.forEach(element => {
+      (element as HTMLElement).style.display = 'block'
+      ;(element as HTMLElement).style.width = '100%'
+    })
+    
+    // Ensure proper text contrast and sizing
+    const textElements = clonedContent.querySelectorAll('*')
+    textElements.forEach(element => {
+      const styles = window.getComputedStyle(element)
+      if (styles.color === 'rgb(107, 114, 128)') { // gray-500
+        (element as HTMLElement).style.color = '#374151' // gray-700 for better PDF readability
+      }
+      // Ensure text doesn't wrap awkwardly
+      ;(element as HTMLElement).style.wordWrap = 'break-word'
+      ;(element as HTMLElement).style.maxWidth = '100%'
+    })
+    
+    // Fix spacing issues
+    const spaceElements = clonedContent.querySelectorAll('[class*="space-"]')
+    spaceElements.forEach(element => {
+      (element as HTMLElement).style.width = '100%'
+    })
+
+    // Add header to PDF
+    const header = document.createElement('div')
+    header.innerHTML = `
+      <div style="text-align: center; margin-bottom: 30px; padding: 20px; border-bottom: 2px solid #3b82f6; background: #f8fafc; width: 100%; box-sizing: border-box;">
+        <h1 style="color: #1f2937; margin: 0 0 15px 0; font-size: 24px; font-weight: bold; line-height: 1.2;">📋 Code Analysis Report</h1>
+        <div style="color: #6b7280; font-size: 13px; line-height: 1.4;">
+          <div style="margin-bottom: 8px;">
+            <strong>Analysis ID:</strong> ${analysisId} • <strong>Generated:</strong> ${new Date().toLocaleDateString()}
+          </div>
+          <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <span><strong>Quality Score:</strong> ${analysisData.results?.codeQualityScore || analysisData.code_quality_score || 0}/100</span>
+            <span><strong>Files:</strong> ${analysisData.results?.totalFiles || analysisData.total_files || 0}</span>
+            <span><strong>Lines:</strong> ${(analysisData.results?.totalLines || analysisData.total_lines || 0).toLocaleString()}</span>
+          </div>
+        </div>
+      </div>
+    `
+    
+    tempContainer.appendChild(header)
+    tempContainer.appendChild(clonedContent)
+    document.body.appendChild(tempContainer)
+
+    // Generate canvas from the content
+    const canvas = await html2canvas(tempContainer, {
+      scale: 2,
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: '#ffffff',
+      width: 800,
+      height: tempContainer.scrollHeight,
+      scrollX: 0,
+      scrollY: 0
+    })
+
+    // Remove temporary container
+    document.body.removeChild(tempContainer)
+
+    // Create PDF
+    const imgData = canvas.toDataURL('image/png')
+    const pdf = new jsPDF('p', 'mm', 'a4')
+    
+    const pdfWidth = pdf.internal.pageSize.getWidth()
+    const pdfHeight = pdf.internal.pageSize.getHeight()
+    const margins = 10 // 10mm margins
+    const contentWidth = pdfWidth - (margins * 2)
+    const contentHeight = pdfHeight - (margins * 2)
+    
+    const imgWidth = canvas.width
+    const imgHeight = canvas.height
+    
+    // Calculate proper scaling to fit page width
+    const scale = contentWidth / (imgWidth * 0.264583) // Convert pixels to mm
+    const scaledWidth = contentWidth
+    const scaledHeight = (imgHeight * 0.264583) * scale
+    
+    // Add content across multiple pages
+    let yPosition = 0
+    let pageNumber = 0
+    
+    while (yPosition < scaledHeight) {
+      if (pageNumber > 0) {
+        pdf.addPage()
+      }
+      
+      const remainingHeight = scaledHeight - yPosition
+      const currentPageHeight = Math.min(contentHeight, remainingHeight)
+      
+      // Calculate source area of the image for this page
+      const sourceY = yPosition / scale / 0.264583
+      const sourceHeight = currentPageHeight / scale / 0.264583
+      
+      // Create a cropped canvas for this page
+      const pageCanvas = document.createElement('canvas')
+      const pageCtx = pageCanvas.getContext('2d')!
+      pageCanvas.width = imgWidth
+      pageCanvas.height = Math.min(sourceHeight, imgHeight - sourceY)
+      
+      pageCtx.drawImage(
+        canvas,
+        0, sourceY, imgWidth, pageCanvas.height,
+        0, 0, imgWidth, pageCanvas.height
+      )
+      
+      const pageImgData = pageCanvas.toDataURL('image/png')
+      
+      pdf.addImage(
+        pageImgData,
+        'PNG',
+        margins,
+        margins,
+        scaledWidth,
+        (pageCanvas.height * 0.264583) * scale
+      )
+      
+      yPosition += contentHeight
+      pageNumber++
+    }
+
+    // Generate filename
+    const repoName = analysisData.source_reference?.split('/').pop() || 'analysis'
+    const date = new Date().toISOString().split('T')[0]
+    const filename = `${repoName}_analysis_${date}.pdf`
+    
+    // Download PDF
+    pdf.save(filename)
+    
+    return { success: true, filename }
+    
+  } catch (error) {
+    console.error('PDF export failed:', error)
+    throw new Error(`PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+  }
+}
+
+export const exportDocumentationToPDF = async (analysisId: string, analysisData: any): Promise<{ success: boolean; filename: string }> => {
+  try {
+    // Find the documentation section specifically
+    const docSection = document.querySelector('[data-section="documentation"]') as HTMLElement
+    
+    if (!docSection) {
+      // Fallback to full report if documentation section not found
+      return exportAnalysisToPDF(analysisId, analysisData)
+    }
+
+    // Create a clean documentation-only PDF
+    const tempContainer = document.createElement('div')
+    tempContainer.style.position = 'absolute'
+    tempContainer.style.left = '-9999px'
+    tempContainer.style.top = '0'
+    tempContainer.style.width = '210mm'
+    tempContainer.style.backgroundColor = 'white'
+    tempContainer.style.padding = '20px'
+    tempContainer.style.fontFamily = 'Arial, sans-serif'
+    
+    // Add header
+    const header = document.createElement('div')
+    header.innerHTML = `
+      <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #10b981;">
+        <h1 style="color: #1f2937; margin: 0; font-size: 28px; font-weight: bold;">📋 Technical Documentation</h1>
+        <p style="color: #6b7280; margin: 10px 0 0 0; font-size: 14px;">
+          Analysis ID: ${analysisId} • Generated: ${new Date().toLocaleDateString()}
+        </p>
+      </div>
+    `
+    
+    const clonedDoc = docSection.cloneNode(true) as HTMLElement
+    
+    // Remove buttons and interactive elements
+    const buttons = clonedDoc.querySelectorAll('button')
+    buttons.forEach(button => button.remove())
+    
+    tempContainer.appendChild(header)
+    tempContainer.appendChild(clonedDoc)
+    document.body.appendChild(tempContainer)
+
+    const canvas = await html2canvas(tempContainer, {
+      scale: 1.5,
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: '#ffffff'
+    })
+
+    document.body.removeChild(tempContainer)
+
+    const imgData = canvas.toDataURL('image/png')
+    const pdf = new jsPDF('p', 'mm', 'a4')
+    
+    const pdfWidth = pdf.internal.pageSize.getWidth()
+    const pdfHeight = pdf.internal.pageSize.getHeight()
+    const imgWidth = canvas.width
+    const imgHeight = canvas.height
+    
+    const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight)
+    const scaledWidth = imgWidth * ratio
+    const scaledHeight = imgHeight * ratio
+    
+    let position = 0
+    
+    while (position < scaledHeight) {
+      if (position > 0) {
+        pdf.addPage()
+      }
+      
+      pdf.addImage(
+        imgData,
+        'PNG',
+        0,
+        -position,
+        scaledWidth,
+        scaledHeight
+      )
+      
+      position += pdfHeight
+    }
+
+    const repoName = analysisData.source_reference?.split('/').pop() || 'analysis'
+    const date = new Date().toISOString().split('T')[0]
+    const filename = `${repoName}_documentation_${date}.pdf`
+    
+    pdf.save(filename)
+    
+    return { success: true, filename }
+    
+  } catch (error) {
+    console.error('Documentation PDF export failed:', error)
+    throw new Error(`Documentation PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+  }
 }

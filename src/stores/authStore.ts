@@ -4,6 +4,7 @@ import { AuthState, User } from '../types'
 interface AuthStore extends AuthState {
   login: (email: string, password: string) => Promise<void>
   loginWithGitHub: () => Promise<void>
+  handleGitHubCallback: (code: string, state: string) => Promise<any>
   logout: () => void
   updateUser: (user: Partial<User>) => void
   checkAuth: () => Promise<void>
@@ -49,33 +50,68 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
   loginWithGitHub: async () => {
     set({ loading: true })
     try {
-      // In a real app, this would handle GitHub OAuth flow
-      const clientId = import.meta.env.VITE_GITHUB_CLIENT_ID
-      const redirectUri = `${import.meta.env.VITE_APP_URL}/auth/github/callback`
+      // Get GitHub OAuth URL from backend
+      const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3002/api'
+      const response = await fetch(`${baseUrl}/auth/github`)
+      const data = await response.json()
       
-      // For demo purposes, simulate successful GitHub login
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      const mockUser: User = {
-        id: '1',
-        email: 'user@github.com',
-        name: 'GitHub User',
-        githubUsername: 'github-user',
-        plan: 'pro',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to initiate GitHub OAuth')
       }
 
+      // Store state for verification
+      localStorage.setItem('github_oauth_state', data.state)
+      
+      // Redirect to GitHub OAuth
+      window.location.href = data.authUrl
+      
+    } catch (error) {
+      set({ loading: false })
+      throw error
+    }
+  },
+
+  handleGitHubCallback: async (code: string, state: string) => {
+    set({ loading: true })
+    try {
+      // Verify state parameter
+      const storedState = localStorage.getItem('github_oauth_state')
+      if (state !== storedState) {
+        throw new Error('Invalid OAuth state parameter')
+      }
+
+      // Exchange code for token
+      const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3002/api'
+      const response = await fetch(`${baseUrl}/auth/github/callback`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ code, state })
+      })
+
+      const data = await response.json()
+      
+      if (!data.success) {
+        throw new Error(data.error || 'GitHub OAuth failed')
+      }
+
+      // Store auth data
+      localStorage.setItem('auth_token', data.token)
+      localStorage.setItem('user', JSON.stringify(data.user))
+      localStorage.removeItem('github_oauth_state')
+
       set({ 
-        user: mockUser, 
+        user: data.user, 
         isAuthenticated: true, 
         loading: false 
       })
-      
-      localStorage.setItem('auth_token', 'github_mock_token')
-      localStorage.setItem('user', JSON.stringify(mockUser))
+
+      return data.user
+
     } catch (error) {
       set({ loading: false })
+      localStorage.removeItem('github_oauth_state')
       throw error
     }
   },

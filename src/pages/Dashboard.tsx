@@ -19,6 +19,13 @@ const modules = [
     color: 'bg-blue-500',
   },
   {
+    name: 'AI Website Analyst',
+    description: 'Comprehensive website performance, SEO, and accessibility analysis',
+    href: '/modules/website-analyst',
+    icon: ChartBarIcon,
+    color: 'bg-cyan-500',
+  },
+  {
     name: 'AI Content Analyst',
     description: 'Analyze content for grammar, readability, and SEO optimization',
     href: '/modules/content-analyst',

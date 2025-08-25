@@ -7,16 +7,19 @@ import {
   CodeBracketIcon,
   DocumentTextIcon,
   CommandLineIcon,
-  PlusCircleIcon
+  PlusCircleIcon,
+  ClockIcon,
+  ChartBarIcon
 } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: HomeIcon },
-  { name: 'Projects', href: '/projects', icon: FolderIcon },
+      { name: 'Analysis History', href: '/projects', icon: ClockIcon },
   {
     name: 'AI Modules',
     children: [
       { name: 'Code Analyst', href: '/modules/code-analyst', icon: CodeBracketIcon },
+      { name: 'Website Analyst', href: '/modules/website-analyst', icon: ChartBarIcon },
       { name: 'Content Analyst', href: '/modules/content-analyst', icon: DocumentTextIcon },
       { name: 'Auto Programmer', href: '/modules/auto-programmer', icon: CommandLineIcon },
       { name: 'Content Creator', href: '/modules/content-creator', icon: PlusCircleIcon },

@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CodeBracketIcon, DocumentArrowUpIcon, ChartBarIcon, ExclamationTriangleIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 import { useDropzone } from 'react-dropzone'
 import JSZip from 'jszip'
@@ -8,17 +9,59 @@ import { createAIService } from '../../services/aiService'
 import { AdoreInoAnalysis, AdoreInoResults } from '../../types'
 import { AdoreInoReport } from '../../components/AdoreInoReport'
 import { AIProviderStatus } from '../../components/AIProviderStatus'
-import { scanURL, convertURLScanToFileStructure } from '../../utils/urlScanner'
+import { CodeAnalysisReport } from '../../components/CodeAnalysisReport'
+import { githubService, GitHubRepository } from '../../services/githubService'
+import { useAuthStore } from '../../stores/authStore'
+import { analysisService, AnalysisResult } from '../../services/analysisService'
 
 export function CodeAnalyst() {
+  const navigate = useNavigate()
   const [selectedProject, setSelectedProject] = useState('')
+  const [selectedRepository, setSelectedRepository] = useState<GitHubRepository | null>(null)
+  const [repositories, setRepositories] = useState<GitHubRepository[]>([])
+  const [loadingRepos, setLoadingRepos] = useState(false)
   const [uploadedFiles, setUploadedFiles] = useState<{ path: string; content: string; size: number }[]>([])
   const [analysis, setAnalysis] = useState<AdoreInoAnalysis | null>(null)
+  const [currentAnalysisResult, setCurrentAnalysisResult] = useState<AnalysisResult | null>(null)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [analysisStep, setAnalysisStep] = useState<string>('')
-  const [userProfile, setUserProfile] = useState<'github' | 'zip' | 'url'>('zip')
+  const [userProfile, setUserProfile] = useState<'github' | 'zip'>('zip')
   const [aiProviderUsed, setAiProviderUsed] = useState<{ provider: string; model: string } | null>(null)
-  const [urlInput, setUrlInput] = useState<string>('')
+  const { user, isAuthenticated } = useAuthStore()
+
+  // Load GitHub repositories when user selects GitHub profile
+  useEffect(() => {
+    if (userProfile === 'github' && isAuthenticated && user?.githubUsername) {
+      loadGitHubRepositories()
+    }
+  }, [userProfile, isAuthenticated, user?.githubUsername])
+
+  const loadGitHubRepositories = async () => {
+    if (!isAuthenticated || !user?.githubUsername) {
+      toast.error('Please connect your GitHub account first')
+      return
+    }
+
+    setLoadingRepos(true)
+    try {
+      const repos = await githubService.getUserRepositories()
+      setRepositories(repos)
+      
+      if (repos.length === 0) {
+        toast('No repositories found in your GitHub account', {
+          duration: 4000,
+          icon: 'ℹ️'
+        })
+      }
+    } catch (error) {
+      console.error('Failed to load repositories:', error)
+      toast.error('Failed to load GitHub repositories. Please try again.')
+    } finally {
+      setLoadingRepos(false)
+    }
+  }
+
+
 
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
     const files: { path: string; content: string; size: number }[] = []
@@ -79,16 +122,99 @@ export function CodeAnalyst() {
   })
 
   const handleAnalyze = async () => {
-    if (uploadedFiles.length === 0 && !selectedProject && !urlInput) {
-      alert('Please upload files, select a project, or enter a URL first')
+    if (userProfile === 'github' && !selectedRepository) {
+      alert('Please select a GitHub repository first')
+      return
+    }
+    if (userProfile === 'zip' && uploadedFiles.length === 0) {
+      alert('Please upload files first')
       return
     }
 
     setIsAnalyzing(true)
-    setAnalysisStep('Initializing analysis...')
+    setAnalysisStep('Initializing code analysis...')
     
     try {
-      // Create analysis record
+      // For GitHub repositories, use backend analysis
+      if (userProfile === 'github' && selectedRepository) {
+        setAnalysisStep('Starting GitHub repository analysis...')
+        
+        try {
+          const result = await githubService.analyzeRepository(selectedRepository.html_url, {
+            aiProfile: 'mixed',
+            deepAnalysis: true,
+            premium: true,
+            aiAnalysis: true
+          })
+          
+          toast.success(`✅ Analysis started for ${selectedRepository.name}! ID: ${result.analysisId}`, {
+            duration: 5000,
+            position: 'top-right',
+          })
+          
+          setAnalysisStep(`Repository analysis in progress... (${result.estimatedTime})`)
+          
+          // Start real polling for results
+          try {
+            const finalResult = await analysisService.pollAnalysisStatus(
+              result.analysisId,
+              (progressResult) => {
+                setCurrentAnalysisResult(progressResult)
+                setAnalysisStep(`Analysis ${progressResult.progress}% complete...`)
+                
+                if (progressResult.status === 'analyzing') {
+                  if (progressResult.progress < 30) {
+                    setAnalysisStep('Cloning repository...')
+                  } else if (progressResult.progress < 70) {
+                    setAnalysisStep('Analyzing code structure...')
+                  } else {
+                    setAnalysisStep('Running AI analysis...')
+                  }
+                }
+              }
+            )
+            
+            setCurrentAnalysisResult(finalResult)
+            setIsAnalyzing(false)
+            
+            if (finalResult.status === 'completed') {
+              toast.success(`🎉 GitHub analysis completed for ${selectedRepository?.name}!`, {
+                duration: 5000
+              })
+            } else {
+              toast.error(`Analysis failed: ${finalResult.errorMessage || 'Unknown error'}`, {
+                duration: 5000
+              })
+            }
+            
+          } catch (error) {
+            console.error('Analysis polling failed:', error)
+            setIsAnalyzing(false)
+            
+            const errorMessage = error instanceof Error ? error.message : String(error)
+            if (errorMessage.includes('Rate limit')) {
+              toast.error('⏳ Analysis polling slowed due to rate limits. Please wait...', {
+                duration: 8000
+              })
+            } else if (errorMessage.includes('timeout')) {
+              toast.error('⏰ Analysis is taking longer than expected. Check back later.', {
+                duration: 8000
+              })
+            } else {
+              toast.error('Analysis failed during processing')
+            }
+          }
+          return
+          
+        } catch (error) {
+          console.error('GitHub analysis failed:', error)
+          toast.error(`Failed to analyze repository: ${error instanceof Error ? error.message : 'Unknown error'}`)
+          setIsAnalyzing(false)
+          return
+        }
+      }
+
+      // For ZIP uploads, use client-side AdoreIno analysis
       const analysisId = `analysis-${Date.now()}`
       const newAnalysis: AdoreInoAnalysis = {
         id: analysisId,
@@ -102,36 +228,10 @@ export function CodeAnalyst() {
       setAnalysisStep('Mapping code structure and dependencies...')
       await new Promise(resolve => setTimeout(resolve, 1500))
       
-      // Use uploaded files, URL scan results, or create demo files if project selected
+      // Use uploaded files or create demo files if project selected
       let filesToAnalyze = uploadedFiles
       
-      // Handle URL scanning
-      if (userProfile === 'url' && urlInput && uploadedFiles.length === 0) {
-        setAnalysisStep('Scanning website URL...')
-        await new Promise(resolve => setTimeout(resolve, 1000))
-        
-        try {
-          const scanResult = await scanURL(urlInput, {
-            includeResources: true,
-            checkPerformance: true,
-            analyzeSEO: true,
-            checkAccessibility: true
-          })
-          
-          filesToAnalyze = convertURLScanToFileStructure(scanResult)
-          
-          toast.success(`Successfully scanned ${urlInput}! 🌐`, {
-            duration: 3000,
-            position: 'top-right',
-          })
-        } catch (error) {
-          toast.error(`Failed to scan URL: ${error instanceof Error ? error.message : 'Unknown error'}`, {
-            duration: 5000,
-            position: 'top-right',
-          })
-          throw error
-        }
-      } else if (uploadedFiles.length === 0 && selectedProject) {
+      if (uploadedFiles.length === 0 && selectedProject) {
         // Create realistic demo files based on selected project
         const demoFiles = {
           portfolio: [
@@ -182,7 +282,9 @@ export function CodeAnalyst() {
         model: (aiService as any).config.model
       })
       
-      const enhancedResults = await aiService.enhanceAnalysisWithAI(baseResults, userProfile)
+      // Map userProfile to AI analysis type
+      const aiProfileType = userProfile === 'github' ? 'technical' : userProfile === 'zip' ? 'mixed' : 'business'
+      const enhancedResults = await aiService.enhanceAnalysisWithAI(baseResults, aiProfileType)
       
       // Complete analysis
       const completedAnalysis: AdoreInoAnalysis = {
@@ -238,11 +340,10 @@ export function CodeAnalyst() {
       {/* Input Method Selection */}
       <div className="card p-6">
         <h3 className="text-lg font-medium text-gray-900 mb-4">Choose Input Method</h3>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {[
             { value: 'github', label: 'GitHub Repository', desc: 'Connect via OAuth and analyze repository' },
-            { value: 'zip', label: 'ZIP Upload', desc: 'Upload website files as ZIP archive' },
-            { value: 'url', label: 'Website URL', desc: 'Scan and analyze live website' }
+            { value: 'zip', label: 'ZIP Upload', desc: 'Upload code files as ZIP archive' }
           ].map(method => (
             <button
               key={method.value}
@@ -265,21 +366,70 @@ export function CodeAnalyst() {
         <div className="card p-6">
           <h3 className="text-lg font-medium text-gray-900 mb-4">Select GitHub Repository</h3>
           <div className="space-y-4">
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-              <p className="text-sm text-yellow-800">
-                🔗 GitHub integration requires OAuth setup. For demo purposes, use ZIP upload instead.
-              </p>
-            </div>
-            <select 
-              className="input"
-              value={selectedProject}
-              onChange={(e) => setSelectedProject(e.target.value)}
-            >
-              <option value="">Connect GitHub first...</option>
-              <option value="portfolio">my-portfolio-site (demo)</option>
-              <option value="ecommerce">ecommerce-website (demo)</option>
-              <option value="blog">company-blog (demo)</option>
-            </select>
+            {!isAuthenticated || !user?.githubUsername ? (
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <p className="text-sm text-blue-800 mb-3">
+                  🔗 Connect your GitHub account to analyze your repositories
+                </p>
+                <button 
+                  onClick={() => window.location.href = '/login'}
+                  className="btn-primary text-sm"
+                >
+                  Connect GitHub Account
+                </button>
+              </div>
+            ) : loadingRepos ? (
+              <div className="flex items-center space-x-2 p-4 bg-gray-50 rounded-lg">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                <span className="text-sm text-gray-600">Loading your repositories...</span>
+              </div>
+            ) : repositories.length === 0 ? (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <p className="text-sm text-yellow-800">
+                  No repositories found. Try refreshing or check your GitHub account.
+                </p>
+                <button 
+                  onClick={loadGitHubRepositories}
+                  className="btn-outline text-sm mt-2"
+                >
+                  Refresh Repositories
+                </button>
+              </div>
+            ) : (
+              <>
+                <select 
+                  className="input"
+                  value={selectedRepository?.id || ''}
+                  onChange={(e) => {
+                    const repoId = parseInt(e.target.value)
+                    const repo = repositories.find(r => r.id === repoId)
+                    setSelectedRepository(repo || null)
+                  }}
+                >
+                  <option value="">Select a repository...</option>
+                  {repositories.map(repo => (
+                    <option key={repo.id} value={repo.id}>
+                      {repo.name} ({repo.language || 'Unknown'}) - {repo.private ? 'Private' : 'Public'}
+                    </option>
+                  ))}
+                </select>
+                
+                {selectedRepository && (
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <h4 className="font-medium text-gray-900">{selectedRepository.name}</h4>
+                    {selectedRepository.description && (
+                      <p className="text-sm text-gray-600 mt-1">{selectedRepository.description}</p>
+                    )}
+                    <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
+                      <span>Language: {selectedRepository.language || 'Unknown'}</span>
+                      <span>Size: {Math.round(selectedRepository.size / 1024)}MB</span>
+                      <span>⭐ {selectedRepository.stargazers_count}</span>
+                      <span>🍴 {selectedRepository.forks_count}</span>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </div>
       )}
@@ -334,26 +484,7 @@ export function CodeAnalyst() {
         </div>
       )}
 
-      {/* URL Scanning */}
-      {userProfile === 'url' && (
-        <div className="card p-6">
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Scan Website URL</h3>
-          <div className="space-y-4">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <p className="text-sm text-blue-800">
-                🌐 Enter your website URL to scan and analyze the live site structure and content.
-              </p>
-            </div>
-            <input
-              type="url"
-              className="input"
-              placeholder="https://example.com"
-              value={urlInput}
-              onChange={(e) => setUrlInput(e.target.value)}
-            />
-          </div>
-        </div>
-      )}
+
 
       {/* Analysis Button */}
       {userProfile && (
@@ -362,10 +493,8 @@ export function CodeAnalyst() {
             className="btn-primary w-full"
             onClick={handleAnalyze}
             disabled={
-              (!selectedProject && uploadedFiles.length === 0 && !urlInput) || 
               isAnalyzing ||
-              (userProfile === 'github' && !selectedProject) ||
-              (userProfile === 'url' && !urlInput) ||
+              (userProfile === 'github' && !selectedRepository) ||
               (userProfile === 'zip' && uploadedFiles.length === 0)
             }
           >
@@ -404,10 +533,64 @@ export function CodeAnalyst() {
       )}
 
       {/* Analysis Results */}
-      {analysis?.results && (
+      {currentAnalysisResult?.status === 'completed' && currentAnalysisResult.results && (
+        <div className="card p-6">
+          <h3 className="text-lg font-medium text-gray-900 mb-4">
+            🎉 Analysis Complete - {currentAnalysisResult.metadata.repo}
+          </h3>
+          <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-green-50 p-4 rounded-lg">
+                <h4 className="font-medium text-green-900">Repository Info</h4>
+                <p className="text-sm text-green-700">
+                  {currentAnalysisResult.metadata.owner}/{currentAnalysisResult.metadata.repo}
+                </p>
+                <p className="text-xs text-green-600">
+                  Branch: {currentAnalysisResult.metadata.branch}
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-medium text-blue-900">Analysis Status</h4>
+                <p className="text-sm text-blue-700 capitalize">{currentAnalysisResult.status}</p>
+                <p className="text-xs text-blue-600">
+                  Completed: {new Date(currentAnalysisResult.completedAt!).toLocaleString()}
+                </p>
+              </div>
+            </div>
+            
+            {currentAnalysisResult.results && (
+              <div className="mt-4">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="font-medium text-gray-900">📊 Complete Analysis Results</h4>
+                  <button
+                    onClick={() => navigate(`/analysis/${currentAnalysisResult.id}`)}
+                    className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors"
+                  >
+                    View Full Report
+                  </button>
+                </div>
+                <CodeAnalysisReport analysis={currentAnalysisResult} />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {currentAnalysisResult?.status === 'failed' && (
+        <div className="card p-6 border-red-200 bg-red-50">
+          <h3 className="text-lg font-medium text-red-900 mb-4">
+            ❌ Analysis Failed - {currentAnalysisResult.metadata.repo}
+          </h3>
+          <p className="text-red-700">{currentAnalysisResult.errorMessage}</p>
+        </div>
+      )}
+
+      {/* Fallback to AdoreIno results for ZIP uploads */}
+      {analysis?.results && !currentAnalysisResult && (
         <AdoreInoReport 
           results={analysis.results} 
-          userProfile={userProfile}
+          userProfile={userProfile === 'github' ? 'technical' : userProfile === 'zip' ? 'mixed' : 'business'}
           aiProvider={aiProviderUsed?.provider}
           aiModel={aiProviderUsed?.model}
         />

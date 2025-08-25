@@ -1,0 +1,741 @@
+{
+  "url": "https://carfix2.vercel.app/",
+  "analyzedAt": "2025-08-24T19:02:48.769Z",
+  "analysisTime": 13345,
+  "basic": {
+    "title": "CarFix AI",
+    "description": "Revolutionizing automotive diagnostics through the powerful fusion of AI intelligence and blockchain technology.",
+    "keywords": "",
+    "lang": "en",
+    "charset": "UTF-8",
+    "ogTitle": "CarFix AI",
+    "ogDescription": "Revolutionizing automotive diagnostics through the powerful fusion of AI intelligence and blockchain technology.",
+    "ogImage": "/images/carfix.png",
+    "ogUrl": "https://carfix2.vercel.app",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "CarFix AI",
+    "twitterDescription": "Revolutionizing automotive diagnostics through the powerful fusion of AI intelligence and blockchain technology.",
+    "hasStructuredData": false,
+    "structuredDataCount": 0,
+    "headingStructure": {
+      "h1": {
+        "count": 1,
+        "texts": [
+          "RevolutionizingCar Industry"
+        ]
+      },
+      "h2": {
+        "count": 8,
+        "texts": [
+          "Who We Are",
+          "Why CarFix AI?",
+          "Platform Features",
+          "Real-World Impact",
+          "Development Roadmap"
+        ]
+      },
+      "h3": {
+        "count": 31,
+        "texts": [
+          "Our Vision",
+          "Our Mission",
+          "Market Demand",
+          "Game-Changing Tech",
+          "Global Scale"
+        ]
+      },
+      "h4": {
+        "count": 4,
+        "texts": [
+          "Real-time Diagnostics",
+          "Predictive Maintenance",
+          "Safety Enhancement",
+          "Cost Optimization"
+        ]
+      },
+      "h5": {
+        "count": 0,
+        "texts": []
+      },
+      "h6": {
+        "count": 0,
+        "texts": []
+      }
+    },
+    "imageCount": 9,
+    "linkCount": 8,
+    "formCount": 0,
+    "wordCount": 1058,
+    "paragraphCount": 46,
+    "externalScripts": [
+      "https://cdn.gpteng.co/gptengineer.js"
+    ],
+    "externalStyles": [
+      "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    ],
+    "domElements": 927,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "html": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>CarFix AI</title>\n    <meta name=\"description\" content=\"Revolutionizing automotive diagnostics through the powerful fusion of AI intelligence and blockchain technology.\">\n    <meta name=\"author\" content=\"CarFix AI\">\n\n    <!-- Open Graph / Facebook -->\n    <meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:url\" content=\"https://carfix2.vercel.app\">\n    <meta property=\"og:title\" content=\"CarFix AI\">\n    <meta property=\"og:description\" content=\"Revolutionizing automotive diagnostics through the powerful fusion of AI intelligence and blockchain technology.\">\n    <meta property=\"og:image\" content=\"/images/carfix.png\">\n    <meta property=\"og:image:type\" content=\"image/png\">\n\n    <!-- Twitter -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\">\n    <meta name=\"twitter:url\" content=\"https://carfix2.vercel.app\">\n    <meta name=\"twitter:title\" content=\"CarFix AI\">\n    <meta name=\"twitter:description\" content=\"Revolutionizing automotive diagnostics through the powerful fusion of AI intelligence and blockchain technology.\">\n    <meta name=\"twitter:image\" content=\"/images/carfix.png\">\n    <meta name=\"twitter:site\" content=\"@carfixai\">\n    <meta name=\"twitter:creator\" content=\"@carfixai\">\n\n    <!-- Favicon -->\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <link rel=\"icon\" type=\"image/svg+xml\" sizes=\"16x16\" href=\"/favicon-16x16.svg\">\n    <link rel=\"icon\" type=\"image/svg+xml\" sizes=\"32x32\" href=\"/favicon-32x32.svg\">\n    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/favicon.svg\">\n    <link rel=\"manifest\" href=\"/site.webmanifest\">\n    \n    <!-- Geist Font -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-C9T8VB8E.js\"></script>\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D4Q_qJ8O.css\">\n  <style type=\"text/css\">:where(html[dir=\"ltr\"]),:where([data-sonner-toaster][dir=\"ltr\"]){--toast-icon-margin-start: -3px;--toast-icon-margin-end: 4px;--toast-svg-margin-start: -1px;--toast-svg-margin-end: 0px;--toast-button-margin-start: auto;--toast-button-margin-end: 0;--toast-close-button-start: 0;--toast-close-button-end: unset;--toast-close-button-transform: translate(-35%, -35%)}:where(html[dir=\"rtl\"]),:where([data-sonner-toaster][dir=\"rtl\"]){--toast-icon-margin-start: 4px;--toast-icon-margin-end: -3px;--toast-svg-margin-start: 0px;--toast-svg-margin-end: -1px;--toast-button-margin-start: 0;--toast-button-margin-end: auto;--toast-close-button-start: unset;--toast-close-button-end: 0;--toast-close-button-transform: translate(35%, -35%)}:where([data-sonner-toaster]){position:fixed;width:var(--width);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--gray1: hsl(0, 0%, 99%);--gray2: hsl(0, 0%, 97.3%);--gray3: hsl(0, 0%, 95.1%);--gray4: hsl(0, 0%, 93%);--gray5: hsl(0, 0%, 90.9%);--gray6: hsl(0, 0%, 88.7%);--gray7: hsl(0, 0%, 85.8%);--gray8: hsl(0, 0%, 78%);--gray9: hsl(0, 0%, 56.1%);--gray10: hsl(0, 0%, 52.3%);--gray11: hsl(0, 0%, 43.5%);--gray12: hsl(0, 0%, 9%);--border-radius: 8px;box-sizing:border-box;padding:0;margin:0;list-style:none;outline:none;z-index:999999999;transition:transform .4s ease}:where([data-sonner-toaster][data-lifted=\"true\"]){transform:translateY(-10px)}@media (hover: none) and (pointer: coarse){:where([data-sonner-toaster][data-lifted=\"true\"]){transform:none}}:where([data-sonner-toaster][data-x-position=\"right\"]){right:var(--offset-right)}:where([data-sonner-toaster][data-x-position=\"left\"]){left:var(--offset-left)}:where([data-sonner-toaster][data-x-position=\"center\"]){left:50%;transform:translate(-50%)}:where([data-sonner-toaster][data-y-position=\"top\"]){top:var(--offset-top)}:where([data-sonner-toaster][data-y-position=\"bottom\"]){bottom:var(--offset-bottom)}:where([data-sonner-toast]){--y: translateY(100%);--lift-amount: calc(var(--lift) * var(--gap));z-index:var(--z-index);position:absolute;opacity:0;transform:var(--y);filter:blur(0);touch-action:none;transition:transform .4s,opacity .4s,height .4s,box-shadow .2s;box-sizing:border-box;outline:none;overflow-wrap:anywhere}:where([data-sonner-toast][data-styled=\"true\"]){padding:16px;background:var(--normal-bg);border:1px solid var(--normal-border);color:var(--normal-text);border-radius:var(--border-radius);box-shadow:0 4px 12px #0000001a;width:var(--width);font-size:13px;display:flex;align-items:center;gap:6px}:where([data-sonner-toast]:focus-visible){box-shadow:0 4px 12px #0000001a,0 0 0 2px #0003}:where([data-sonner-toast][data-y-position=\"top\"]){top:0;--y: translateY(-100%);--lift: 1;--lift-amount: calc(1 * var(--gap))}:where([data-sonner-toast][data-y-position=\"bottom\"]){bottom:0;--y: translateY(100%);--lift: -1;--lift-amount: calc(var(--lift) * var(--gap))}:where([data-sonner-toast]) :where([data-description]){font-weight:400;line-height:1.4;color:inherit}:where([data-sonner-toast]) :where([data-title]){font-weight:500;line-height:1.5;color:inherit}:where([data-sonner-toast]) :where([data-icon]){display:flex;height:16px;width:16px;position:relative;justify-content:flex-start;align-items:center;flex-shrink:0;margin-left:var(--toast-icon-margin-start);margin-right:var(--toast-icon-margin-end)}:where([data-sonner-toast][data-promise=\"true\"]) :where([data-icon])>svg{opacity:0;transform:scale(.8);transform-origin:center;animation:sonner-fade-in .3s ease forwards}:where([data-sonner-toast]) :where([data-icon])>*{flex-shrink:0}:where([data-sonner-toast]) :where([data-icon]) svg{margin-left:var(--toast-svg-margin-start);margin-right:var(--toast-svg-margin-end)}:where([data-sonner-toast]) :where([data-content]){display:flex;flex-direction:column;gap:2px}[data-sonner-toast][data-styled=true] [data-button]{border-radius:4px;padding-left:8px;padding-right:8px;height:24px;font-size:12px;color:var(--normal-bg);background:var(--normal-text);margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end);border:none;cursor:pointer;outline:none;display:flex;align-items:center;flex-shrink:0;transition:opacity .4s,box-shadow .2s}:where([data-sonner-toast]) :where([data-button]):focus-visible{box-shadow:0 0 0 2px #0006}:where([data-sonner-toast]) :where([data-button]):first-of-type{margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end)}:where([data-sonner-toast]) :where([data-cancel]){color:var(--normal-text);background:rgba(0,0,0,.08)}:where([data-sonner-toast][data-theme=\"dark\"]) :where([data-cancel]){background:rgba(255,255,255,.3)}:where([data-sonner-toast]) :where([data-close-button]){position:absolute;left:var(--toast-close-button-start);right:var(--toast-close-button-end);top:0;height:20px;width:20px;display:flex;justify-content:center;align-items:center;padding:0;color:var(--gray12);border:1px solid var(--gray4);transform:var(--toast-close-button-transform);border-radius:50%;cursor:pointer;z-index:1;transition:opacity .1s,background .2s,border-color .2s}[data-sonner-toast] [data-close-button]{background:var(--gray1)}:where([data-sonner-toast]) :where([data-close-button]):focus-visible{box-shadow:0 4px 12px #0000001a,0 0 0 2px #0003}:where([data-sonner-toast]) :where([data-disabled=\"true\"]){cursor:not-allowed}:where([data-sonner-toast]):hover :where([data-close-button]):hover{background:var(--gray2);border-color:var(--gray5)}:where([data-sonner-toast][data-swiping=\"true\"]):before{content:\"\";position:absolute;left:-50%;right:-50%;height:100%;z-index:-1}:where([data-sonner-toast][data-y-position=\"top\"][data-swiping=\"true\"]):before{bottom:50%;transform:scaleY(3) translateY(50%)}:where([data-sonner-toast][data-y-position=\"bottom\"][data-swiping=\"true\"]):before{top:50%;transform:scaleY(3) translateY(-50%)}:where([data-sonner-toast][data-swiping=\"false\"][data-removed=\"true\"]):before{content:\"\";position:absolute;inset:0;transform:scaleY(2)}:where([data-sonner-toast]):after{content:\"\";position:absolute;left:0;height:calc(var(--gap) + 1px);bottom:100%;width:100%}:where([data-sonner-toast][data-mounted=\"true\"]){--y: translateY(0);opacity:1}:where([data-sonner-toast][data-expanded=\"false\"][data-front=\"false\"]){--scale: var(--toasts-before) * .05 + 1;--y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));height:var(--front-toast-height)}:where([data-sonner-toast])>*{transition:opacity .4s}:where([data-sonner-toast][data-expanded=\"false\"][data-front=\"false\"][data-styled=\"true\"])>*{opacity:0}:where([data-sonner-toast][data-visible=\"false\"]){opacity:0;pointer-events:none}:where([data-sonner-toast][data-mounted=\"true\"][data-expanded=\"true\"]){--y: translateY(calc(var(--lift) * var(--offset)));height:var(--initial-height)}:where([data-sonner-toast][data-removed=\"true\"][data-front=\"true\"][data-swipe-out=\"false\"]){--y: translateY(calc(var(--lift) * -100%));opacity:0}:where([data-sonner-toast][data-removed=\"true\"][data-front=\"false\"][data-swipe-out=\"false\"][data-expanded=\"true\"]){--y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));opacity:0}:where([data-sonner-toast][data-removed=\"true\"][data-front=\"false\"][data-swipe-out=\"false\"][data-expanded=\"false\"]){--y: translateY(40%);opacity:0;transition:transform .5s,opacity .2s}:where([data-sonner-toast][data-removed=\"true\"][data-front=\"false\"]):before{height:calc(var(--initial-height) + 20%)}[data-sonner-toast][data-swiping=true]{transform:var(--y) translateY(var(--swipe-amount-y, 0px)) translate(var(--swipe-amount-x, 0px));transition:none}[data-sonner-toast][data-swiped=true]{user-select:none}[data-sonner-toast][data-swipe-out=true][data-y-position=bottom],[data-sonner-toast][data-swipe-out=true][data-y-position=top]{animation-duration:.2s;animation-timing-function:ease-out;animation-fill-mode:forwards}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=left]{animation-name:swipe-out-left}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=right]{animation-name:swipe-out-right}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=up]{animation-name:swipe-out-up}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=down]{animation-name:swipe-out-down}@keyframes swipe-out-left{0%{transform:var(--y) translate(var(--swipe-amount-x));opacity:1}to{transform:var(--y) translate(calc(var(--swipe-amount-x) - 100%));opacity:0}}@keyframes swipe-out-right{0%{transform:var(--y) translate(var(--swipe-amount-x));opacity:1}to{transform:var(--y) translate(calc(var(--swipe-amount-x) + 100%));opacity:0}}@keyframes swipe-out-up{0%{transform:var(--y) translateY(var(--swipe-amount-y));opacity:1}to{transform:var(--y) translateY(calc(var(--swipe-amount-y) - 100%));opacity:0}}@keyframes swipe-out-down{0%{transform:var(--y) translateY(var(--swipe-amount-y));opacity:1}to{transform:var(--y) translateY(calc(var(--swipe-amount-y) + 100%));opacity:0}}@media (max-width: 600px){[data-sonner-toaster]{position:fixed;right:var(--mobile-offset-right);left:var(--mobile-offset-left);width:100%}[data-sonner-toaster][dir=rtl]{left:calc(var(--mobile-offset-left) * -1)}[data-sonner-toaster] [data-sonner-toast]{left:0;right:0;width:calc(100% - var(--mobile-offset-left) * 2)}[data-sonner-toaster][data-x-position=left]{left:var(--mobile-offset-left)}[data-sonner-toaster][data-y-position=bottom]{bottom:var(--mobile-offset-bottom)}[data-sonner-toaster][data-y-position=top]{top:var(--mobile-offset-top)}[data-sonner-toaster][data-x-position=center]{left:var(--mobile-offset-left);right:var(--mobile-offset-right);transform:none}}[data-sonner-toaster][data-theme=light]{--normal-bg: #fff;--normal-border: var(--gray4);--normal-text: var(--gray12);--success-bg: hsl(143, 85%, 96%);--success-border: hsl(145, 92%, 91%);--success-text: hsl(140, 100%, 27%);--info-bg: hsl(208, 100%, 97%);--info-border: hsl(221, 91%, 91%);--info-text: hsl(210, 92%, 45%);--warning-bg: hsl(49, 100%, 97%);--warning-border: hsl(49, 91%, 91%);--warning-text: hsl(31, 92%, 45%);--error-bg: hsl(359, 100%, 97%);--error-border: hsl(359, 100%, 94%);--error-text: hsl(360, 100%, 45%)}[data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true]{--normal-bg: #000;--normal-border: hsl(0, 0%, 20%);--normal-text: var(--gray1)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true]{--normal-bg: #fff;--normal-border: var(--gray3);--normal-text: var(--gray12)}[data-sonner-toaster][data-theme=dark]{--normal-bg: #000;--normal-bg-hover: hsl(0, 0%, 12%);--normal-border: hsl(0, 0%, 20%);--normal-border-hover: hsl(0, 0%, 25%);--normal-text: var(--gray1);--success-bg: hsl(150, 100%, 6%);--success-border: hsl(147, 100%, 12%);--success-text: hsl(150, 86%, 65%);--info-bg: hsl(215, 100%, 6%);--info-border: hsl(223, 100%, 12%);--info-text: hsl(216, 87%, 65%);--warning-bg: hsl(64, 100%, 6%);--warning-border: hsl(60, 100%, 12%);--warning-text: hsl(46, 87%, 65%);--error-bg: hsl(358, 76%, 10%);--error-border: hsl(357, 89%, 16%);--error-text: hsl(358, 100%, 81%)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]{background:var(--normal-bg);border-color:var(--normal-border);color:var(--normal-text)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]:hover{background:var(--normal-bg-hover);border-color:var(--normal-border-hover)}[data-rich-colors=true][data-sonner-toast][data-type=success],[data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button]{background:var(--success-bg);border-color:var(--success-border);color:var(--success-text)}[data-rich-colors=true][data-sonner-toast][data-type=info],[data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button]{background:var(--info-bg);border-color:var(--info-border);color:var(--info-text)}[data-rich-colors=true][data-sonner-toast][data-type=warning],[data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button]{background:var(--warning-bg);border-color:var(--warning-border);color:var(--warning-text)}[data-rich-colors=true][data-sonner-toast][data-type=error],[data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button]{background:var(--error-bg);border-color:var(--error-border);color:var(--error-text)}.sonner-loading-wrapper{--size: 16px;height:var(--size);width:var(--size);position:absolute;inset:0;z-index:10}.sonner-loading-wrapper[data-visible=false]{transform-origin:center;animation:sonner-fade-out .2s ease forwards}.sonner-spinner{position:relative;top:50%;left:50%;height:var(--size);width:var(--size)}.sonner-loading-bar{animation:sonner-spin 1.2s linear infinite;background:var(--gray11);border-radius:6px;height:8%;left:-10%;position:absolute;top:-3.9%;width:24%}.sonner-loading-bar:nth-child(1){animation-delay:-1.2s;transform:rotate(.0001deg) translate(146%)}.sonner-loading-bar:nth-child(2){animation-delay:-1.1s;transform:rotate(30deg) translate(146%)}.sonner-loading-bar:nth-child(3){animation-delay:-1s;transform:rotate(60deg) translate(146%)}.sonner-loading-bar:nth-child(4){animation-delay:-.9s;transform:rotate(90deg) translate(146%)}.sonner-loading-bar:nth-child(5){animation-delay:-.8s;transform:rotate(120deg) translate(146%)}.sonner-loading-bar:nth-child(6){animation-delay:-.7s;transform:rotate(150deg) translate(146%)}.sonner-loading-bar:nth-child(7){animation-delay:-.6s;transform:rotate(180deg) translate(146%)}.sonner-loading-bar:nth-child(8){animation-delay:-.5s;transform:rotate(210deg) translate(146%)}.sonner-loading-bar:nth-child(9){animation-delay:-.4s;transform:rotate(240deg) translate(146%)}.sonner-loading-bar:nth-child(10){animation-delay:-.3s;transform:rotate(270deg) translate(146%)}.sonner-loading-bar:nth-child(11){animation-delay:-.2s;transform:rotate(300deg) translate(146%)}.sonner-loading-bar:nth-child(12){animation-delay:-.1s;transform:rotate(330deg) translate(146%)}@keyframes sonner-fade-in{0%{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@keyframes sonner-fade-out{0%{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.8)}}@keyframes sonner-spin{0%{opacity:1}to{opacity:.15}}@media (prefers-reduced-motion){[data-sonner-toast],[data-sonner-toast]>*,.sonner-loading-bar{transition:none!important;animation:none!important}}.sonner-loader{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;transition:opacity .2s,transform .2s}.sonner-loader[data-visible=false]{opacity:0;transform:scale(.8) translate(-50%,-50%)}\n</style></head>\n\n  <body>\n    <div id=\"root\"><div role=\"region\" aria-label=\"Notifications (F8)\" tabindex=\"-1\" style=\"pointer-events: none;\"><ol tabindex=\"-1\" class=\"fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]\"></ol></div><section aria-label=\"Notifications alt+T\" tabindex=\"-1\" aria-live=\"polite\" aria-relevant=\"additions text\" aria-atomic=\"false\"></section><div class=\"min-h-screen bg-white\"><nav class=\"fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent\"><div class=\"max-w-7xl mx-auto px-4 sm:px-6 py-4\"><div class=\"flex items-center justify-between\"><div class=\"flex items-center space-x-2\"><div class=\"w-8 h-8 bg-black rounded-lg flex items-center justify-center\"><span class=\"text-white font-bold text-sm\">CF</span></div><span class=\"text-xl font-bold tracking-tighter\">CarFix AI</span></div><div class=\"hidden md:flex items-center space-x-8\"><button class=\"text-gray-600 hover:text-black transition-colors\">About</button><button class=\"text-gray-600 hover:text-black transition-colors\">Features</button><button class=\"text-gray-600 hover:text-black transition-colors\">Platform</button><button class=\"text-gray-600 hover:text-black transition-colors\">Roadmap</button><button class=\"text-gray-600 hover:text-black transition-colors\">Tokenomics</button><button class=\"text-gray-600 hover:text-black transition-colors\">Team</button></div><div class=\"flex items-center space-x-4\"><button class=\"items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 hidden sm:flex bg-black text-white hover:bg-gray-800 px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105\">Join Presale</button><button class=\"md:hidden p-2 text-gray-600 hover:text-black transition-colors\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-menu w-6 h-6\"><line x1=\"4\" x2=\"20\" y1=\"12\" y2=\"12\"></line><line x1=\"4\" x2=\"20\" y1=\"6\" y2=\"6\"></line><line x1=\"4\" x2=\"20\" y1=\"18\" y2=\"18\"></line></svg></button></div></div><div class=\"md:hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 overflow-hidden bg-white/95 backdrop-blur-sm border-t border-gray-100 mt-4 rounded-b-lg shadow-lg\"><div class=\"py-4 space-y-2\"><button class=\"block w-full text-left px-4 py-2 text-gray-600 hover:text-black transition-colors\">About</button><button class=\"block w-full text-left px-4 py-2 text-gray-600 hover:text-black transition-colors\">Features</button><button class=\"block w-full text-left px-4 py-2 text-gray-600 hover:text-black transition-colors\">Platform</button><button class=\"block w-full text-left px-4 py-2 text-gray-600 hover:text-black transition-colors\">Roadmap</button><button class=\"block w-full text-left px-4 py-2 text-gray-600 hover:text-black transition-colors\">Tokenomics</button><button class=\"block w-full text-left px-4 py-2 text-gray-600 hover:text-black transition-colors\">Team</button><div class=\"px-4 pt-2 pb-2\"><button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-full bg-black text-white hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition-all duration-300\">Join Presale</button></div></div></div></div></nav><section class=\"relative min-h-screen pt-32 sm:pt-24 flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white\"><div class=\"absolute inset-0 opacity-[0.15] z-0\"><div class=\"absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black via-transparent to-transparent\"></div><div class=\"absolute inset-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] bg-[size:4rem_4rem]\"></div></div><div class=\"absolute inset-0 overflow-hidden\"><div class=\"absolute w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-gradient-to-br from-black/5 to-transparent animate-float-slow\" style=\"left: 10%; top: 20%; animation-delay: 0s; animation-duration: 8s;\"></div><div class=\"absolute w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-gradient-to-br from-black/5 to-transparent animate-float-slow\" style=\"left: 25%; top: 30%; animation-delay: 0.5s; animation-duration: 10s;\"></div><div class=\"absolute w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-gradient-to-br from-black/5 to-transparent animate-float-slow\" style=\"left: 40%; top: 40%; animation-delay: 1s; animation-duration: 12s;\"></div><div class=\"absolute w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-gradient-to-br from-black/5 to-transparent animate-float-slow\" style=\"left: 55%; top: 50%; animation-delay: 1.5s; animation-duration: 14s;\"></div><div class=\"absolute w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-gradient-to-br from-black/5 to-transparent animate-float-slow\" style=\"left: 70%; top: 60%; animation-delay: 2s; animation-duration: 16s;\"></div><div class=\"absolute w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-gradient-to-br from-black/5 to-transparent animate-float-slow\" style=\"left: 85%; top: 70%; animation-delay: 2.5s; animation-duration: 18s;\"></div></div><div class=\"absolute inset-0 overflow-hidden pointer-events-none hidden sm:block\"><div class=\"absolute top-1/4 left-[10%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 0s; animation-duration: 12s;\">AI Diagnostics</div><div class=\"absolute top-1/3 right-[15%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 2s; animation-duration: 10s;\">Smart Repair</div><div class=\"absolute top-[20%] right-[8%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 4s; animation-duration: 14s;\">Predictive Analysis</div><div class=\"absolute top-1/2 left-[5%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 1s; animation-duration: 11s;\">Real-time Monitoring</div><div class=\"absolute top-[45%] right-[5%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 3s; animation-duration: 13s;\">Cost Optimization</div><div class=\"absolute bottom-1/4 left-[12%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 5s; animation-duration: 9s;\">Machine Learning</div><div class=\"absolute bottom-1/3 right-[12%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 1.5s; animation-duration: 15s;\">Blockchain Security</div><div class=\"absolute bottom-[20%] left-[8%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 3.5s; animation-duration: 8s;\">Data Analytics</div></div><div class=\"absolute w-[600px] h-[600px] bg-gradient-radial from-black/5 via-black/2 to-transparent rounded-full pointer-events-none transition-all duration-300 ease-out blur-xl hidden sm:block\" style=\"left: -300px; top: -300px;\"></div><div class=\"max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10\"><div class=\"animate-fade-in\"><div class=\"absolute -top-20 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-br from-black/5 to-transparent rounded-full blur-3xl\"></div><div class=\"absolute -bottom-20 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-tr from-black/5 to-transparent rounded-full blur-3xl\"></div><div class=\"relative inline-block mb-6 sm:mb-8\"><span class=\"inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/5 text-xs sm:text-sm font-medium text-black/60 animate-fade-in\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sparkles w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2\"><path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\"></path><path d=\"M20 3v4\"></path><path d=\"M22 5h-4\"></path><path d=\"M4 17v2\"></path><path d=\"M5 18H3\"></path></svg>The Future of Automotive Diagnostics</span></div><h1 class=\"text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter mb-6 sm:mb-8 leading-none relative\"><span class=\"relative inline-block\"><span class=\"bg-gradient-to-b from-black via-gray-800 to-black bg-clip-text text-transparent\">Revolutionizing</span><div class=\"absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-black to-transparent\"></div></span><br><span class=\"relative inline-block mt-2 sm:mt-4\"><span class=\"bg-gradient-to-b from-black via-gray-800 to-black bg-clip-text text-transparent animate-pulse-soft\">Car Industry</span><div class=\"absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-transparent via-black to-transparent animate-pulse-soft\"></div></span></h1><p class=\"text-lg sm:text-2xl md:text-3xl text-gray-600 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in px-4 sm:px-0\" style=\"animation-delay: 0.2s;\">Revolutionary <span class=\"font-bold text-black\">AI-powered</span> diagnostic software that transforms how we approach automotive repair. Smarter diagnostics, faster solutions, better outcomes.</p><div class=\"flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 animate-fade-in px-4 sm:px-0\" style=\"animation-delay: 0.4s;\"><button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-11 w-full sm:w-auto bg-black text-white hover:bg-gray-800 px-6 sm:px-10 py-4 sm:py-6 text-lg sm:text-xl font-medium rounded-xl transition-all duration-300 hover:scale-105 group relative overflow-hidden shadow-lg hover:shadow-xl\"><span class=\"relative z-10\">Join Presale Now</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-right ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform relative z-10\"><path d=\"M5 12h14\"></path><path d=\"m12 5 7 7-7 7\"></path></svg><div class=\"absolute inset-0 bg-gradient-to-r from-gray-800 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300\"></div></button><button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-background h-11 w-full sm:w-auto border-2 border-black text-black hover:bg-black hover:text-white px-6 sm:px-10 py-4 sm:py-6 text-lg sm:text-xl font-medium rounded-xl transition-all duration-300 hover:scale-105 group relative overflow-hidden shadow-lg hover:shadow-xl\"><span class=\"relative z-10\">Work With Us</span><div class=\"absolute inset-0 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left\"></div></button></div></div><div class=\"grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 mt-12 sm:mt-20 animate-scale-in px-4 sm:px-0\" style=\"animation-delay: 0.6s;\"><div class=\"text-center group hover:scale-105 transition-all duration-300 p-4 sm:p-6 rounded-2xl hover:bg-black/5\"><div class=\"text-4xl sm:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-b from-black to-gray-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300\">98%</div><div class=\"text-base sm:text-lg text-gray-600 group-hover:text-black transition-colors duration-300\">Diagnostic Accuracy</div></div><div class=\"text-center group hover:scale-105 transition-all duration-300 p-4 sm:p-6 rounded-2xl hover:bg-black/5\"><div class=\"text-4xl sm:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-b from-black to-gray-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300\">50%</div><div class=\"text-base sm:text-lg text-gray-600 group-hover:text-black transition-colors duration-300\">Time Reduction</div></div><div class=\"text-center group hover:scale-105 transition-all duration-300 p-4 sm:p-6 rounded-2xl hover:bg-black/5\"><div class=\"text-4xl sm:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-b from-black to-gray-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300\">1.64B+</div><div class=\"text-base sm:text-lg text-gray-600 group-hover:text-black transition-colors duration-300\">Drivers in the World</div></div></div></div></section><section id=\"about\" class=\"py-24 bg-white\"><div class=\"max-w-7xl mx-auto px-6\"><div class=\"text-center mb-16\"><h2 class=\"text-5xl md:text-6xl font-bold tracking-tighter mb-6\">Who We Are</h2><p class=\"text-xl text-gray-600 max-w-3xl mx-auto\">CarFIX AI is a pioneering venture driven by a singular vision: to bridge the gap between automotive technology and everyday drivers. With a relentless focus on innovation and user-centric design, we are committed to revolutionizing the automotive industry and empowering millions of drivers worldwide.</p></div><div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8 items-start\"><div class=\"space-y-8\"><div><h3 class=\"text-3xl font-bold mb-4 tracking-tighter\">Our Vision</h3><p class=\"text-lg text-gray-600 leading-relaxed\">We envision a future where every driver, regardless of their vehicle make or model, can benefit from intelligent software that enhances safety, efficiency, and overall driving experience. By filling the gap between cutting-edge technology and everyday drivers, CarFIX AI strives to make automotive maintenance smarter, more accessible, and more inclusive.</p></div><div class=\"bg-gray-100 rounded-2xl p-8 relative overflow-hidden\"><div class=\"absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:2rem_2rem]\"></div><div class=\"relative z-10\"><div class=\"grid grid-cols-2 gap-6\"><div class=\"text-center p-4 bg-white rounded-xl border border-gray-200\"><div class=\"text-2xl font-bold mb-2\">256-bit</div><div class=\"text-gray-600 text-sm\">Blockchain Security</div></div><div class=\"text-center p-4 bg-white rounded-xl border border-gray-200\"><div class=\"text-2xl font-bold mb-2\">$CFIX</div><div class=\"text-gray-600 text-sm\">Powered by</div></div></div><div class=\"mt-6 flex items-center justify-between\"><div class=\"flex space-x-2\"><div class=\"w-3 h-3 bg-gray-300 rounded-full\"></div><div class=\"w-3 h-3 bg-gray-400 rounded-full\"></div><div class=\"w-3 h-3 bg-gray-300 rounded-full\"></div></div><div class=\"text-xs text-gray-500 font-mono\">SYS_ACTIVE</div></div></div></div></div><div class=\"space-y-8\"><div class=\"bg-gray-100 rounded-2xl p-8 relative overflow-hidden min-h-[200px]\"><div class=\"absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-200/50 via-transparent to-transparent\"></div><div class=\"absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,#00000008_25%,#00000008_50%,transparent_50%,transparent_75%,#00000008_75%)] bg-[size:1rem_1rem]\"></div><div class=\"relative z-10 h-full flex flex-col justify-between\"><div class=\"flex justify-between items-start\"><div class=\"space-y-2\"><div class=\"w-16 h-2 bg-gray-300 rounded\"></div><div class=\"w-12 h-2 bg-gray-400 rounded\"></div><div class=\"w-20 h-2 bg-gray-300 rounded\"></div></div><div class=\"w-8 h-8 bg-gray-300 rounded-lg flex items-center justify-center\"><div class=\"w-4 h-4 bg-gray-500 rounded\"></div></div></div><div class=\"flex items-end justify-between\"><div class=\"text-xs text-gray-500 font-mono\">AI_CORE</div><div class=\"flex space-x-1\"><div class=\"w-1 h-4 bg-gray-400 rounded\"></div><div class=\"w-1 h-6 bg-gray-500 rounded\"></div><div class=\"w-1 h-3 bg-gray-400 rounded\"></div><div class=\"w-1 h-5 bg-gray-300 rounded\"></div></div></div></div></div><div><h3 class=\"text-3xl font-bold mb-4 tracking-tighter\">Our Mission</h3><p class=\"text-lg text-gray-600 leading-relaxed\">At CarFIX AI, our mission is to democratize access to advanced vehicle maintenance solutions that were once reserved for luxury vehicles. By harnessing the power of AI and cryptocurrency, we aim to empower millions of drivers worldwide with real-time diagnostics, predictive maintenance, and personalized recommendations.</p></div></div></div></div></section><section id=\"features\" class=\"py-24 bg-gray-50 relative overflow-hidden\"><div class=\"absolute inset-0 opacity-5\"><div class=\"absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/10 via-transparent to-black/10 animate-pulse\"></div></div><div class=\"max-w-[1920px] mx-auto px-8 relative z-10\"><div class=\"text-center mb-20\"><h2 class=\"text-5xl md:text-6xl font-bold tracking-tighter mb-8 animate-fade-in\">Why CarFix AI?</h2><p class=\"text-xl text-gray-600 max-w-4xl mx-auto animate-fade-in\" style=\"animation-delay: 0.2s;\">Experience the next generation of automotive diagnostics with features designed to revolutionize how you approach vehicle maintenance and repair.</p></div><div class=\"grid grid-cols-1 md:grid-cols-5 gap-8\"><div class=\"bg-white p-8 rounded-2xl border border-gray-200 hover:border-black transition-all duration-500 group hover:shadow-xl hover:-translate-y-2 animate-fade-in relative overflow-hidden text-center\" style=\"animation-delay: 0s;\"><div class=\"absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500\"></div><div class=\"mb-8 relative z-10 flex justify-center\"><div class=\"w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 relative overflow-hidden\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-earth h-10 w-10 text-white relative z-10\"><path d=\"M21.54 15H17a2 2 0 0 0-2 2v4.54\"></path><path d=\"M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17\"></path><path d=\"M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05\"></path><circle cx=\"12\" cy=\"12\" r=\"10\"></circle></svg></div></div><h3 class=\"text-2xl font-bold mb-6 tracking-tighter group-hover:text-black transition-colors duration-300 relative z-10\">Market Demand</h3><p class=\"text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 relative z-10\">With millions of vehicles on the road, the demand for efficient, reliable maintenance solutions is higher than ever. CarFix Ai taps into this vast market, offering a solution that not only meets but exceeds expectations.</p><div class=\"absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-black/10 transition-all duration-500\"></div></div><div class=\"bg-white p-8 rounded-2xl border border-gray-200 hover:border-black transition-all duration-500 group hover:shadow-xl hover:-translate-y-2 animate-fade-in relative overflow-hidden text-center\" style=\"animation-delay: 0.1s;\"><div class=\"absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500\"></div><div class=\"mb-8 relative z-10 flex justify-center\"><div class=\"w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 relative overflow-hidden\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-brain h-10 w-10 text-white relative z-10\"><path d=\"M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z\"></path><path d=\"M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z\"></path><path d=\"M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4\"></path><path d=\"M17.599 6.5a3 3 0 0 0 .399-1.375\"></path><path d=\"M6.003 5.125A3 3 0 0 0 6.401 6.5\"></path><path d=\"M3.477 10.896a4 4 0 0 1 .585-.396\"></path><path d=\"M19.938 10.5a4 4 0 0 1 .585.396\"></path><path d=\"M6 18a4 4 0 0 1-1.967-.516\"></path><path d=\"M19.967 17.484A4 4 0 0 1 18 18\"></path></svg></div></div><h3 class=\"text-2xl font-bold mb-6 tracking-tighter group-hover:text-black transition-colors duration-300 relative z-10\">Game-Changing Tech</h3><p class=\"text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 relative z-10\">Our proprietary AI algorithms enable predictive maintenance, proactive safety alerts, and personalized recommendations, setting us apart from traditional diagnostic tools. This disruptive technology is poised to transform the automotive industry.</p><div class=\"absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-black/10 transition-all duration-500\"></div></div><div class=\"bg-white p-8 rounded-2xl border border-gray-200 hover:border-black transition-all duration-500 group hover:shadow-xl hover:-translate-y-2 animate-fade-in relative overflow-hidden text-center\" style=\"animation-delay: 0.2s;\"><div class=\"absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500\"></div><div class=\"mb-8 relative z-10 flex justify-center\"><div class=\"w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 relative overflow-hidden\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chart-column h-10 w-10 text-white relative z-10\"><path d=\"M3 3v16a2 2 0 0 0 2 2h16\"></path><path d=\"M18 17V9\"></path><path d=\"M13 17V5\"></path><path d=\"M8 17v-3\"></path></svg></div></div><h3 class=\"text-2xl font-bold mb-6 tracking-tighter group-hover:text-black transition-colors duration-300 relative z-10\">Global Scale</h3><p class=\"text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 relative z-10\">CarFix Ai isn't just a product – it's a platform for growth. As we expand our capabilities and partnerships, we have the potential to scale our services globally, reaching millions of drivers and creating substantial revenue streams.</p><div class=\"absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-black/10 transition-all duration-500\"></div></div><div class=\"bg-white p-8 rounded-2xl border border-gray-200 hover:border-black transition-all duration-500 group hover:shadow-xl hover:-translate-y-2 animate-fade-in relative overflow-hidden text-center\" style=\"animation-delay: 0.3s;\"><div class=\"absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500\"></div><div class=\"mb-8 relative z-10 flex justify-center\"><div class=\"w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 relative overflow-hidden\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-leaf h-10 w-10 text-white relative z-10\"><path d=\"M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z\"></path><path d=\"M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12\"></path></svg></div></div><h3 class=\"text-2xl font-bold mb-6 tracking-tighter group-hover:text-black transition-colors duration-300 relative z-10\">Impact That Matters</h3><p class=\"text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 relative z-10\">By enhancing vehicle performance and promoting safer driving habits, CarFix Ai isn't just about convenience – it's about saving lives and reducing environmental impact. Investors can feel confident knowing they're supporting a product that makes a tangible difference.</p><div class=\"absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-black/10 transition-all duration-500\"></div></div><div class=\"bg-white p-8 rounded-2xl border border-gray-200 hover:border-black transition-all duration-500 group hover:shadow-xl hover:-translate-y-2 animate-fade-in relative overflow-hidden text-center\" style=\"animation-delay: 0.4s;\"><div class=\"absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500\"></div><div class=\"mb-8 relative z-10 flex justify-center\"><div class=\"w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 relative overflow-hidden\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-users h-10 w-10 text-white relative z-10\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg></div></div><h3 class=\"text-2xl font-bold mb-6 tracking-tighter group-hover:text-black transition-colors duration-300 relative z-10\">Elite Team</h3><p class=\"text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300 relative z-10\">CarFix Ai is building a team of passionate experts in AI, automotive engineering, and software development. With a track record of success and a shared vision for the future, our team is poised to lead the way in this rapidly evolving industry.</p><div class=\"absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-black/10 transition-all duration-500\"></div></div></div></div></section><section id=\"platform\" class=\"py-24 bg-gray-50 relative overflow-hidden\"><div class=\"absolute inset-0\"><div class=\"absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50\"></div><div class=\"absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black/5 via-transparent to-transparent opacity-50\"></div><div class=\"absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem]\"></div></div><div class=\"max-w-[1920px] mx-auto px-4 sm:px-8 relative z-10\"><div class=\"text-center mb-16\"><div class=\"inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/5 mb-6\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-sparkles w-5 h-5 text-black/60\"><path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\"></path><path d=\"M20 3v4\"></path><path d=\"M22 5h-4\"></path><path d=\"M4 17v2\"></path><path d=\"M5 18H3\"></path></svg><span class=\"text-sm font-medium text-black/60\">AI-Powered Features</span></div><h2 class=\"text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter mb-6\">Platform Features</h2><p class=\"text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto\">Discover how CarFix Ai revolutionizes automotive care with cutting-edge features</p></div><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-auto max-w-[90%] sm:max-w-none\"><div class=\"group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-black/10 transition-all duration-300\"><div class=\"absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity duration-500 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black via-transparent to-transparent\"></div><div class=\"p-6 cursor-pointer relative\"><div class=\"flex items-start justify-between gap-4\"><div class=\"flex-grow\"><h3 class=\"text-xl font-bold tracking-tighter mb-3 group-hover:text-black transition-colors\">Diagnostic Assistance</h3><div class=\"flex items-center justify-between\"><span class=\"text-sm text-gray-500 font-medium\">Immediate problem identification and solutions</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-down w-5 h-5 text-gray-400 group-hover:text-black transition-colors\"><path d=\"m6 9 6 6 6-6\"></path></svg></div></div></div></div></div><div class=\"group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-black/10 transition-all duration-300\"><div class=\"absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity duration-500 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:1rem_1rem]\"></div><div class=\"p-6 cursor-pointer relative\"><div class=\"flex items-start justify-between gap-4\"><div class=\"flex-grow\"><h3 class=\"text-xl font-bold tracking-tighter mb-3 group-hover:text-black transition-colors\">Predictive Maintenance</h3><div class=\"flex items-center justify-between\"><span class=\"text-sm text-gray-500 font-medium\">Preventive maintenance scheduling</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-down w-5 h-5 text-gray-400 group-hover:text-black transition-colors\"><path d=\"m6 9 6 6 6-6\"></path></svg></div></div></div></div></div><div class=\"group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-black/10 transition-all duration-300\"><div class=\"absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity duration-500 bg-[linear-gradient(45deg,transparent_25%,#000_25%,#000_50%,transparent_50%,transparent_75%,#000_75%)] bg-[size:1rem_1rem]\"></div><div class=\"p-6 cursor-pointer relative\"><div class=\"flex items-start justify-between gap-4\"><div class=\"flex-grow\"><h3 class=\"text-xl font-bold tracking-tighter mb-3 group-hover:text-black transition-colors\">Customized Recommendations</h3><div class=\"flex items-center justify-between\"><span class=\"text-sm text-gray-500 font-medium\">Personalized vehicle optimization</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-down w-5 h-5 text-gray-400 group-hover:text-black transition-colors\"><path d=\"m6 9 6 6 6-6\"></path></svg></div></div></div></div></div><div class=\"group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-black/10 transition-all duration-300\"><div class=\"absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity duration-500 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black via-transparent to-transparent\"></div><div class=\"p-6 cursor-pointer relative\"><div class=\"flex items-start justify-between gap-4\"><div class=\"flex-grow\"><h3 class=\"text-xl font-bold tracking-tighter mb-3 group-hover:text-black transition-colors\">Safety Alerts</h3><div class=\"flex items-center justify-between\"><span class=\"text-sm text-gray-500 font-medium\">Real-time safety monitoring</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-down w-5 h-5 text-gray-400 group-hover:text-black transition-colors\"><path d=\"m6 9 6 6 6-6\"></path></svg></div></div></div></div></div><div class=\"group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-black/10 transition-all duration-300\"><div class=\"absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opa",
+    "headers": {
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "age": "5050",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "content-disposition": "inline",
+      "content-encoding": "br",
+      "content-length": "893",
+      "content-type": "text/html; charset=utf-8",
+      "date": "Sun, 24 Aug 2025 19:02:35 GMT",
+      "etag": "\"d84e1c5bafe77f68171b44ec7e18026d\"",
+      "last-modified": "Sun, 24 Aug 2025 17:38:24 GMT",
+      "server": "Vercel",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-vercel-cache": "HIT",
+      "x-vercel-id": "arn1::29cvj-1756062155764-191ef2a0c1b8"
+    },
+    "statusCode": 200,
+    "loadTime": 0,
+    "screenshot": null,
+    "finalUrl": "https://carfix2.vercel.app/"
+  },
+  "lighthouse": {
+    "performance": 97,
+    "seo": 100,
+    "accessibility": 90,
+    "bestPractices": 100,
+    "metrics": {
+      "firstContentfulPaint": 717.5373999999999,
+      "largestContentfulPaint": 1217.7104,
+      "firstInputDelay": 16,
+      "cumulativeLayoutShift": 0.020605565770656396,
+      "speedIndex": 819.3563138778541,
+      "totalBlockingTime": 0,
+      "timeToInteractive": 1217.7104,
+      "serverResponseTime": 191.362
+    },
+    "opportunities": [
+      {
+        "audit": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.89,
+        "savings": 1217.7104,
+        "displayValue": "1.2 s"
+      },
+      {
+        "audit": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "1,220 ms"
+      },
+      {
+        "audit": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "savings": 0
+      },
+      {
+        "audit": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "heading-order",
+        "title": "Heading elements are not in a sequentially-descending order",
+        "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.10/heading-order).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "link-name",
+        "title": "Links do not have a discernible name",
+        "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.10/link-name).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "savings": 61.879999999999995,
+        "displayValue": "1 resource found"
+      },
+      {
+        "audit": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "Est savings of 44 KiB"
+      },
+      {
+        "audit": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "Est savings of 210 KiB"
+      },
+      {
+        "audit": "uses-optimized-images",
+        "title": "Efficiently encode images",
+        "description": "Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/).",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "Est savings of 19 KiB"
+      },
+      {
+        "audit": "uses-responsive-images",
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "Est savings of 456 KiB"
+      },
+      {
+        "audit": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
+        "score": 0.5,
+        "savings": 886,
+        "displayValue": "886 elements"
+      }
+    ],
+    "rawLighthouseData": {
+      "fetchTime": "2025-08-24T19:02:39.056Z",
+      "requestedUrl": "https://carfix2.vercel.app/",
+      "finalUrl": "https://carfix2.vercel.app/",
+      "lighthouseVersion": "12.8.1",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36",
+      "environment": {
+        "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+        "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36",
+        "benchmarkIndex": 3603,
+        "credits": {
+          "axe-core": "4.10.3"
+        }
+      },
+      "configSettings": {
+        "output": "json",
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "node",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "seo",
+          "best-practices",
+          "accessibility"
+        ],
+        "skipAudits": []
+      }
+    }
+  },
+  "comprehensiveSEO": {
+    "technical": {
+      "score": 46,
+      "factors": {
+        "titleOptimization": {
+          "present": true,
+          "length": 9,
+          "optimal": false,
+          "issues": [
+            "Title too short"
+          ],
+          "recommendations": [
+            "Expand title with more descriptive keywords"
+          ]
+        },
+        "metaDescription": {
+          "present": true,
+          "length": 112,
+          "optimal": false,
+          "issues": [
+            "Description too short"
+          ],
+          "recommendations": [
+            "Expand description to at least 120 characters"
+          ]
+        },
+        "headingStructure": {
+          "hasH1": true,
+          "h1Count": 1,
+          "hasHierarchy": true,
+          "issues": [],
+          "recommendations": [],
+          "structure": {
+            "h1": {
+              "count": 1,
+              "texts": [
+                "RevolutionizingCar Industry"
+              ]
+            },
+            "h2": {
+              "count": 8,
+              "texts": [
+                "Who We Are",
+                "Why CarFix AI?",
+                "Platform Features",
+                "Real-World Impact",
+                "Development Roadmap"
+              ]
+            },
+            "h3": {
+              "count": 31,
+              "texts": [
+                "Our Vision",
+                "Our Mission",
+                "Market Demand",
+                "Game-Changing Tech",
+                "Global Scale"
+              ]
+            },
+            "h4": {
+              "count": 4,
+              "texts": [
+                "Real-time Diagnostics",
+                "Predictive Maintenance",
+                "Safety Enhancement",
+                "Cost Optimization"
+              ]
+            },
+            "h5": {
+              "count": 0,
+              "texts": []
+            },
+            "h6": {
+              "count": 0,
+              "texts": []
+            }
+          }
+        },
+        "urlStructure": {
+          "optimal": true,
+          "score": 80
+        },
+        "metaTags": {
+          "optimal": true,
+          "score": 70
+        },
+        "structuredData": {
+          "present": false,
+          "score": 20
+        },
+        "internalLinking": {
+          "score": 60,
+          "linkCount": 8
+        }
+      },
+      "issues": []
+    },
+    "content": {
+      "score": 72,
+      "analysis": {
+        "depth": {
+          "wordCount": 1058,
+          "paragraphCount": 46,
+          "adequateDepth": true,
+          "contentRatio": 23,
+          "depthScore": 85,
+          "issues": [],
+          "recommendations": []
+        },
+        "structure": {
+          "score": 55
+        },
+        "uniqueness": {
+          "score": 70
+        },
+        "relevance": {
+          "score": 60
+        },
+        "freshness": {
+          "score": 50
+        }
+      },
+      "issues": []
+    },
+    "onPage": {
+      "score": 65,
+      "factors": {
+        "keywordOptimization": {
+          "score": 50,
+          "recommendations": [
+            "Research and optimize for target keywords"
+          ]
+        },
+        "imageSEO": {
+          "score": 40,
+          "issues": [
+            "Missing alt text analysis"
+          ],
+          "recommendations": [
+            "Add descriptive alt text to all images"
+          ]
+        },
+        "linkProfile": {
+          "score": 55,
+          "internalLinks": 8
+        },
+        "socialSignals": {
+          "score": 70,
+          "hasOpenGraph": true
+        }
+      },
+      "optimizationLevel": "good"
+    },
+    "userExperience": {
+      "score": 60,
+      "signals": {
+        "readability": {
+          "score": 60,
+          "recommendations": [
+            "Improve content readability"
+          ]
+        },
+        "navigation": {
+          "score": 65,
+          "linkCount": 8
+        },
+        "organization": {
+          "score": 60
+        },
+        "mobileOptimization": {
+          "score": 70
+        }
+      },
+      "userFriendliness": "good"
+    },
+    "competitive": {
+      "contentDepthVsIndustry": "adequate",
+      "technicalImplementation": "average",
+      "brandSignals": "weak",
+      "trustSignals": "moderate"
+    },
+    "overallScore": 62,
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "Technical",
+        "issue": "Title optimization",
+        "action": "Optimize title tag length and keyword placement",
+        "impact": "High - Direct ranking factor"
+      },
+      {
+        "priority": "medium",
+        "category": "Technical",
+        "issue": "Meta description",
+        "action": "Write compelling meta description (120-160 characters)",
+        "impact": "Medium - Affects click-through rates"
+      },
+      {
+        "priority": "low",
+        "category": "Enhancement",
+        "issue": "No structured data",
+        "action": "Add relevant schema markup (Organization, Article, etc.)",
+        "impact": "Low - Rich snippets potential"
+      }
+    ],
+    "criticalIssues": [],
+    "opportunities": [
+      "Add structured data for rich snippets"
+    ]
+  },
+  "accessibility": {
+    "score": 58,
+    "issues": {
+      "errors": 53,
+      "warnings": 0,
+      "notices": 0,
+      "total": 53
+    },
+    "details": [
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+        "message": "This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.",
+        "selector": "#root > div:nth-child(3) > nav > div > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+        "context": "<button class=\"md:hidden p-2 text-gray-600 hover:text-black transition-colors\"><svg xmlns=\"http://www.w3.org/2...</button>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+        "context": "<div class=\"absolute top-1/4 left-[10%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 0s; animation-duration: 12s;\">AI Diagnostics</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(2)",
+        "context": "<div class=\"absolute top-1/3 right-[15%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 2s; animation-duration: 10s;\">Smart Repair</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(3)",
+        "context": "<div class=\"absolute top-[20%] right-[8%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 4s; animation-duration: 14s;\">Predictive Analysis</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(4)",
+        "context": "<div class=\"absolute top-1/2 left-[5%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 1s; animation-duration: 11s;\">Real-time Monitoring</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(5)",
+        "context": "<div class=\"absolute top-[45%] right-[5%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 3s; animation-duration: 13s;\">Cost Optimization</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(6)",
+        "context": "<div class=\"absolute bottom-1/4 left-[12%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 5s; animation-duration: 9s;\">Machine Learning</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(7)",
+        "context": "<div class=\"absolute bottom-1/3 right-[12%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 1.5s; animation-duration: 15s;\">Blockchain Security</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(3) > div:nth-child(8)",
+        "context": "<div class=\"absolute bottom-[20%] left-[8%] text-xs font-medium text-black/30 animate-float-slow opacity-70\" style=\"animation-delay: 3.5s; animation-duration: 8s;\">Data Analytics</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#root > div:nth-child(3) > section:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(3) > span",
+        "context": "<span class=\"inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/5 text-xs sm:text-sm font-medium text-black/60 animate-fade-in\"><svg xmlns=\"http://www.w3.org/2...</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.39:1. Recommendation:  change text colour to #000715.",
+        "selector": "#about > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2)",
+        "context": "<div class=\"text-xs text-gray-500 font-mono\">SYS_ACTIVE</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.39:1. Recommendation:  change text colour to #000715.",
+        "selector": "#about > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1)",
+        "context": "<div class=\"text-xs text-gray-500 font-mono\">AI_CORE</div>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of NaN:1.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(1) > div > span",
+        "context": "<span class=\"text-sm font-medium text-black/60\">AI-Powered Features</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Immediate problem identificatio...</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Preventive maintenance scheduli...</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Personalized vehicle optimizati...</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Real-time safety monitoring</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Fuel consumption optimization</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(6) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Seamless home-vehicle connectiv...</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.83:1. Recommendation:  change text colour to #525967.",
+        "selector": "#platform > div:nth-child(2) > div:nth-child(2) > div:nth-child(7) > div:nth-child(2) > div > div > div > span",
+        "context": "<span class=\"text-sm text-gray-500 font-medium\">Automatic emergency response</span>"
+      }
+    ]
+  },
+  "technologies": {
+    "technologies": [
+      {
+        "name": "Tailwind CSS",
+        "categories": [
+          "CSS Frameworks"
+        ],
+        "version": "4",
+        "confidence": 70,
+        "website": null,
+        "source": "custom-patterns"
+      },
+      {
+        "name": "Bulma",
+        "categories": [
+          "CSS Frameworks"
+        ],
+        "version": "4",
+        "confidence": 50,
+        "website": null,
+        "source": "custom-patterns"
+      },
+      {
+        "name": "Google Fonts",
+        "categories": [
+          "CDN"
+        ],
+        "version": "4",
+        "confidence": 50,
+        "website": null,
+        "source": "custom-patterns"
+      }
+    ],
+    "categories": [
+      "CSS Frameworks",
+      "CDN"
+    ],
+    "count": 3,
+    "stats": {
+      "total": 3,
+      "byCategory": {
+        "CSS Frameworks": 2,
+        "CDN": 1
+      },
+      "byConfidence": {
+        "high": 0,
+        "medium": 3,
+        "low": 0
+      },
+      "topTechnologies": [
+        {
+          "name": "Tailwind CSS",
+          "confidence": 70
+        },
+        {
+          "name": "Bulma",
+          "confidence": 50
+        },
+        {
+          "name": "Google Fonts",
+          "confidence": 50
+        }
+      ]
+    }
+  },
+  "security": {
+    "isHttps": true,
+    "score": 17,
+    "headers": {
+      "strict-transport-security": true,
+      "content-security-policy": false,
+      "x-frame-options": false,
+      "x-content-type-options": false,
+      "x-xss-protection": false,
+      "referrer-policy": false
+    },
+    "rawHeaders": {
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-vercel-cache": "HIT",
+      "x-vercel-id": "arn1::bcbdw-1756062158130-833ba0bfb15f"
+    },
+    "recommendations": [
+      "Implement Content Security Policy to prevent XSS attacks",
+      "Add X-Frame-Options header to prevent clickjacking",
+      "Add X-Content-Type-Options header to prevent MIME sniffing"
+    ]
+  },
+  "scores": {
+    "performance": 97,
+    "seo": 100,
+    "accessibility": 90,
+    "security": 17,
+    "bestPractices": 100,
+    "overall": 85
+  }
+}

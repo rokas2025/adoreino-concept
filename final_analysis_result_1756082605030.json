@@ -1,0 +1,1675 @@
+{
+  "id": "a60c971d-50df-42f9-955e-198910b01b9d",
+  "url": "https://speculation.art/",
+  "analyzedAt": "2025-08-25T00:43:24.861Z",
+  "analysisTime": 18576,
+  "performance": {
+    "score": 99,
+    "metrics": {
+      "firstContentfulPaint": 594.7891000000001,
+      "largestContentfulPaint": 901.5268000000002,
+      "firstInputDelay": 16,
+      "cumulativeLayoutShift": 0.003953822782593468,
+      "speedIndex": 594.7891000000001,
+      "totalBlockingTime": 0,
+      "timeToInteractive": 901.5268000000003,
+      "serverResponseTime": 43.22
+    },
+    "opportunities": [
+      {
+        "audit": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "savings": 0,
+        "displayValue": "4 cookies found"
+      },
+      {
+        "audit": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "savings": 0
+      },
+      {
+        "audit": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "frame-title",
+        "title": "`<frame>` or `<iframe>` elements do not have a title",
+        "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more about frame titles](https://dequeuniversity.com/rules/axe/4.10/frame-title).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "savings": 4962.4,
+        "displayValue": "3 resources found"
+      },
+      {
+        "audit": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "savings": 3459390,
+        "displayValue": "Total size was 3,378 KiB"
+      },
+      {
+        "audit": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0.5,
+        "savings": 20,
+        "displayValue": "Est savings of 153 KiB"
+      },
+      {
+        "audit": "uses-responsive-images",
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).",
+        "score": 0,
+        "savings": 50,
+        "displayValue": "Est savings of 459 KiB"
+      },
+      {
+        "audit": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "Est savings of 1 KiB"
+      },
+      {
+        "audit": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "meta-description",
+        "title": "Document does not have a meta description",
+        "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "bf-cache",
+        "title": "Page prevented back/forward cache restoration",
+        "description": "Many navigations are performed by going back to a previous page, or forwards again. The back/forward cache (bfcache) can speed up these return navigations. [Learn more about the bfcache](https://developer.chrome.com/docs/lighthouse/performance/bf-cache/)",
+        "score": 0,
+        "savings": 0,
+        "displayValue": "3 failure reasons"
+      }
+    ]
+  },
+  "lighthouse": {
+    "performance": 99,
+    "seo": 91,
+    "accessibility": 89,
+    "bestPractices": 74,
+    "metrics": {
+      "firstContentfulPaint": 594.7891000000001,
+      "largestContentfulPaint": 901.5268000000002,
+      "firstInputDelay": 16,
+      "cumulativeLayoutShift": 0.003953822782593468,
+      "speedIndex": 594.7891000000001,
+      "totalBlockingTime": 0,
+      "timeToInteractive": 901.5268000000003,
+      "serverResponseTime": 43.22
+    },
+    "opportunities": [
+      {
+        "audit": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "savings": 0,
+        "displayValue": "4 cookies found"
+      },
+      {
+        "audit": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "savings": 0
+      },
+      {
+        "audit": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "frame-title",
+        "title": "`<frame>` or `<iframe>` elements do not have a title",
+        "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more about frame titles](https://dequeuniversity.com/rules/axe/4.10/frame-title).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "savings": 4962.4,
+        "displayValue": "3 resources found"
+      },
+      {
+        "audit": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "savings": 3459390,
+        "displayValue": "Total size was 3,378 KiB"
+      },
+      {
+        "audit": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+        "score": 0.5,
+        "savings": 20,
+        "displayValue": "Est savings of 153 KiB"
+      },
+      {
+        "audit": "uses-responsive-images",
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).",
+        "score": 0,
+        "savings": 50,
+        "displayValue": "Est savings of 459 KiB"
+      },
+      {
+        "audit": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+        "score": 0.5,
+        "savings": 0,
+        "displayValue": "Est savings of 1 KiB"
+      },
+      {
+        "audit": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "meta-description",
+        "title": "Document does not have a meta description",
+        "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+        "score": 0,
+        "savings": 0
+      },
+      {
+        "audit": "bf-cache",
+        "title": "Page prevented back/forward cache restoration",
+        "description": "Many navigations are performed by going back to a previous page, or forwards again. The back/forward cache (bfcache) can speed up these return navigations. [Learn more about the bfcache](https://developer.chrome.com/docs/lighthouse/performance/bf-cache/)",
+        "score": 0,
+        "savings": 0,
+        "displayValue": "3 failure reasons"
+      }
+    ]
+  },
+  "seo": {
+    "score": 55,
+    "lighthouseScore": 91,
+    "title": "$SPECU | Professional Speculation",
+    "description": "",
+    "keywords": [],
+    "headings": {
+      "h1": {
+        "count": 1,
+        "texts": [
+          "$SPECU"
+        ]
+      },
+      "h2": {
+        "count": 2,
+        "texts": [
+          "The Art of Pure Speculation Returns to Crypto Markets",
+          "Speculate"
+        ]
+      },
+      "h3": {
+        "count": 6,
+        "texts": [
+          "The Psychology of Speculation",
+          "The Only Certainty",
+          "Created by Clanker",
+          "Clanker's Wall Street Meme",
+          "Live Chart"
+        ]
+      },
+      "h4": {
+        "count": 1,
+        "texts": [
+          "Disclaimer"
+        ]
+      },
+      "h5": {
+        "count": 0,
+        "texts": []
+      },
+      "h6": {
+        "count": 0,
+        "texts": []
+      }
+    },
+    "comprehensive": {
+      "technical": {
+        "score": 56,
+        "factors": {
+          "titleOptimization": {
+            "present": true,
+            "length": 33,
+            "optimal": true,
+            "issues": [],
+            "recommendations": []
+          },
+          "metaDescription": {
+            "present": false,
+            "length": 0,
+            "optimal": false,
+            "issues": [
+              "Missing meta description"
+            ],
+            "recommendations": [
+              "Add a compelling meta description"
+            ]
+          },
+          "headingStructure": {
+            "hasH1": true,
+            "h1Count": 1,
+            "hasHierarchy": true,
+            "issues": [],
+            "recommendations": [],
+            "structure": {
+              "h1": {
+                "count": 1,
+                "texts": [
+                  "$SPECU"
+                ]
+              },
+              "h2": {
+                "count": 2,
+                "texts": [
+                  "The Art of Pure Speculation Returns to Crypto Markets",
+                  "Speculate"
+                ]
+              },
+              "h3": {
+                "count": 6,
+                "texts": [
+                  "The Psychology of Speculation",
+                  "The Only Certainty",
+                  "Created by Clanker",
+                  "Clanker's Wall Street Meme",
+                  "Live Chart"
+                ]
+              },
+              "h4": {
+                "count": 1,
+                "texts": [
+                  "Disclaimer"
+                ]
+              },
+              "h5": {
+                "count": 0,
+                "texts": []
+              },
+              "h6": {
+                "count": 0,
+                "texts": []
+              }
+            }
+          },
+          "urlStructure": {
+            "optimal": true,
+            "score": 80
+          },
+          "metaTags": {
+            "optimal": false,
+            "score": 70
+          },
+          "structuredData": {
+            "present": false,
+            "score": 20
+          },
+          "internalLinking": {
+            "score": 60,
+            "linkCount": 3
+          }
+        },
+        "issues": []
+      },
+      "content": {
+        "score": 46,
+        "analysis": {
+          "depth": {
+            "wordCount": 295,
+            "paragraphCount": 11,
+            "adequateDepth": false,
+            "contentRatio": 26.818181818181817,
+            "depthScore": 20,
+            "issues": [
+              "Thin content: only 295 words"
+            ],
+            "recommendations": [
+              "Add more comprehensive content (target: 300+ words)",
+              "Include detailed explanations, examples, and supporting information",
+              "Break content into logical sections with subheadings"
+            ]
+          },
+          "structure": {
+            "score": 55
+          },
+          "uniqueness": {
+            "score": 70
+          },
+          "relevance": {
+            "score": 60
+          },
+          "freshness": {
+            "score": 50
+          }
+        },
+        "issues": []
+      },
+      "onPage": {
+        "score": 65,
+        "factors": {
+          "keywordOptimization": {
+            "score": 50,
+            "recommendations": [
+              "Research and optimize for target keywords"
+            ]
+          },
+          "imageSEO": {
+            "score": 40,
+            "issues": [
+              "Missing alt text analysis"
+            ],
+            "recommendations": [
+              "Add descriptive alt text to all images"
+            ]
+          },
+          "linkProfile": {
+            "score": 55,
+            "internalLinks": 3
+          },
+          "socialSignals": {
+            "score": 30,
+            "hasOpenGraph": false
+          }
+        },
+        "optimizationLevel": "good"
+      },
+      "userExperience": {
+        "score": 60,
+        "signals": {
+          "readability": {
+            "score": 60,
+            "recommendations": [
+              "Improve content readability"
+            ]
+          },
+          "navigation": {
+            "score": 65,
+            "linkCount": 3
+          },
+          "organization": {
+            "score": 60
+          },
+          "mobileOptimization": {
+            "score": 70
+          }
+        },
+        "userFriendliness": "good"
+      },
+      "competitive": {
+        "contentDepthVsIndustry": "thin",
+        "technicalImplementation": "average",
+        "brandSignals": "weak",
+        "trustSignals": "moderate"
+      },
+      "overallScore": 55,
+      "recommendations": [
+        {
+          "priority": "high",
+          "category": "Content",
+          "issue": "Thin content",
+          "action": "Expand content to at least 300 words with valuable, detailed information",
+          "impact": "High - Essential for ranking"
+        },
+        {
+          "priority": "medium",
+          "category": "Technical",
+          "issue": "Meta description",
+          "action": "Write compelling meta description (120-160 characters)",
+          "impact": "Medium - Affects click-through rates"
+        },
+        {
+          "priority": "low",
+          "category": "Enhancement",
+          "issue": "No structured data",
+          "action": "Add relevant schema markup (Organization, Article, etc.)",
+          "impact": "Low - Rich snippets potential"
+        }
+      ],
+      "criticalIssues": [
+        "Thin content - insufficient word count for ranking"
+      ],
+      "opportunities": [
+        "Add structured data for rich snippets",
+        "Expand content for better topical authority"
+      ]
+    },
+    "contentDepth": {
+      "wordCount": 295,
+      "paragraphCount": 11,
+      "adequateDepth": false,
+      "contentRatio": 26.818181818181817,
+      "depthScore": 20,
+      "issues": [
+        "Thin content: only 295 words"
+      ],
+      "recommendations": [
+        "Add more comprehensive content (target: 300+ words)",
+        "Include detailed explanations, examples, and supporting information",
+        "Break content into logical sections with subheadings"
+      ]
+    },
+    "technicalSEO": {
+      "score": 56,
+      "factors": {
+        "titleOptimization": {
+          "present": true,
+          "length": 33,
+          "optimal": true,
+          "issues": [],
+          "recommendations": []
+        },
+        "metaDescription": {
+          "present": false,
+          "length": 0,
+          "optimal": false,
+          "issues": [
+            "Missing meta description"
+          ],
+          "recommendations": [
+            "Add a compelling meta description"
+          ]
+        },
+        "headingStructure": {
+          "hasH1": true,
+          "h1Count": 1,
+          "hasHierarchy": true,
+          "issues": [],
+          "recommendations": [],
+          "structure": {
+            "h1": {
+              "count": 1,
+              "texts": [
+                "$SPECU"
+              ]
+            },
+            "h2": {
+              "count": 2,
+              "texts": [
+                "The Art of Pure Speculation Returns to Crypto Markets",
+                "Speculate"
+              ]
+            },
+            "h3": {
+              "count": 6,
+              "texts": [
+                "The Psychology of Speculation",
+                "The Only Certainty",
+                "Created by Clanker",
+                "Clanker's Wall Street Meme",
+                "Live Chart"
+              ]
+            },
+            "h4": {
+              "count": 1,
+              "texts": [
+                "Disclaimer"
+              ]
+            },
+            "h5": {
+              "count": 0,
+              "texts": []
+            },
+            "h6": {
+              "count": 0,
+              "texts": []
+            }
+          }
+        },
+        "urlStructure": {
+          "optimal": true,
+          "score": 80
+        },
+        "metaTags": {
+          "optimal": false,
+          "score": 70
+        },
+        "structuredData": {
+          "present": false,
+          "score": 20
+        },
+        "internalLinking": {
+          "score": 60,
+          "linkCount": 3
+        }
+      },
+      "issues": []
+    },
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "Content",
+        "issue": "Thin content",
+        "action": "Expand content to at least 300 words with valuable, detailed information",
+        "impact": "High - Essential for ranking"
+      },
+      {
+        "priority": "medium",
+        "category": "Technical",
+        "issue": "Meta description",
+        "action": "Write compelling meta description (120-160 characters)",
+        "impact": "Medium - Affects click-through rates"
+      },
+      {
+        "priority": "low",
+        "category": "Enhancement",
+        "issue": "No structured data",
+        "action": "Add relevant schema markup (Organization, Article, etc.)",
+        "impact": "Low - Rich snippets potential"
+      }
+    ],
+    "criticalIssues": [
+      "Thin content - insufficient word count for ranking"
+    ]
+  },
+  "accessibility": {
+    "score": 84,
+    "issues": {
+      "errors": 20,
+      "warnings": 0,
+      "notices": 0,
+      "total": 20
+    },
+    "details": [
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+        "selector": "#btc-change",
+        "context": "<span class=\"change negative\" id=\"btc-change\">-2.85%</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+        "selector": "#eth-change",
+        "context": "<span class=\"change negative\" id=\"eth-change\">-2.63%</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+        "selector": "#degen-change",
+        "context": "<span class=\"change negative\" id=\"degen-change\">-5.12%</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+        "selector": "#clanker-change",
+        "context": "<span class=\"change negative\" id=\"clanker-change\">-1.96%</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+        "selector": "#lum-change",
+        "context": "<span class=\"change negative\" id=\"lum-change\">-12.07%</span>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.34:1. Recommendation:  change text colour to #0b0e15.",
+        "selector": "html > body > main > div:nth-child(1) > section > h1",
+        "context": "<h1 class=\"site-title\">$SPECU</h1>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.22:1. Recommendation:  change text colour to #0a0a0a.",
+        "selector": "html > body > main > div:nth-child(1) > section > p",
+        "context": "<p class=\"site-subtitle\">VOLUME I • ISSUE I • ETERNAL BU...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(1) > div > article > p",
+        "context": "<p class=\"story-subtitle\">As markets evolve, one truth re...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(1) > div > p",
+        "context": "<p>When you speculate, you become ...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(2) > div > p",
+        "context": "<p>In a world of uncertainty, spec...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(3) > div > p",
+        "context": "<p>Pure speculation manifested by ...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(4) > div > p",
+        "context": "<p>Wall Street's new favorite meme...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.34:1. Recommendation:  change text colour to #0b0e15.",
+        "selector": "html > body > main > div:nth-child(2) > h2",
+        "context": "<h2 class=\"section-title\">Speculate</h2>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.47:1. Recommendation:  change text colour to #73767d.",
+        "selector": "html > body > main > div:nth-child(2) > div > div:nth-child(1) > h3",
+        "context": "<h3 class=\"widget-title\">Live Chart</h3>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1",
+        "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+        "selector": "html > body > main > div:nth-child(2) > div > div:nth-child(1) > div > iframe",
+        "context": "<iframe src=\"https://dexscreener.com/base/0x459952dB263F63C631bB512B13363c5e799b50aa?embed=1&amp;theme=dark&amp;chartHeight=820\" width=\"100%\" height=\"820px\" style=\"border: none;\">\n                        </iframe>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.47:1. Recommendation:  change text colour to #73767d.",
+        "selector": "html > body > main > div:nth-child(2) > div > div:nth-child(2) > h3",
+        "context": "<h3 class=\"widget-title\">Swap $SPECU</h3>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1",
+        "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+        "selector": "#uniswap-widget > iframe",
+        "context": "<iframe src=\"https://app.uniswap.org/swap?chain=base&amp;outputCurrency=0x11d41056ff636107DD710EC4Ea772490A710cDb7&amp;theme=dark&amp;enableWebsocket=true\" allow=\"clipboard-write; web-share; cross-origin-isolated\" sandbox=\"allow-same-origin allow-scr..."
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.47:1. Recommendation:  change text colour to #73767d.",
+        "selector": "html > body > main > div:nth-child(3) > div > h4",
+        "context": "<h4 class=\"disclaimer-title\">Disclaimer</h4>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(3) > div > p:nth-child(2)",
+        "context": "<p>Fair launch token created by AI...</p>"
+      },
+      {
+        "type": "error",
+        "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+        "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+        "selector": "html > body > main > div:nth-child(3) > div > p:nth-child(4)",
+        "context": "<p>$SPECU is pure speculation. No ...</p>"
+      }
+    ]
+  },
+  "security": {
+    "score": 17,
+    "headers": {
+      "strict-transport-security": true,
+      "content-security-policy": false,
+      "x-frame-options": false,
+      "x-content-type-options": false,
+      "x-xss-protection": false,
+      "referrer-policy": false
+    },
+    "vulnerabilities": []
+  },
+  "technologies": [
+    "jsDelivr",
+    "Google Fonts",
+    "Node.js"
+  ],
+  "basic": {
+    "title": "$SPECU | Professional Speculation",
+    "description": "",
+    "keywords": "",
+    "lang": "en",
+    "charset": "UTF-8",
+    "ogTitle": "",
+    "ogDescription": "",
+    "ogImage": "",
+    "ogUrl": "",
+    "twitterCard": "",
+    "twitterTitle": "",
+    "twitterDescription": "",
+    "hasStructuredData": false,
+    "structuredDataCount": 0,
+    "headingStructure": {
+      "h1": {
+        "count": 1,
+        "texts": [
+          "$SPECU"
+        ]
+      },
+      "h2": {
+        "count": 2,
+        "texts": [
+          "The Art of Pure Speculation Returns to Crypto Markets",
+          "Speculate"
+        ]
+      },
+      "h3": {
+        "count": 6,
+        "texts": [
+          "The Psychology of Speculation",
+          "The Only Certainty",
+          "Created by Clanker",
+          "Clanker's Wall Street Meme",
+          "Live Chart"
+        ]
+      },
+      "h4": {
+        "count": 1,
+        "texts": [
+          "Disclaimer"
+        ]
+      },
+      "h5": {
+        "count": 0,
+        "texts": []
+      },
+      "h6": {
+        "count": 0,
+        "texts": []
+      }
+    },
+    "imageCount": 6,
+    "linkCount": 3,
+    "formCount": 0,
+    "wordCount": 295,
+    "paragraphCount": 11,
+    "externalScripts": [
+      "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ],
+    "externalStyles": [
+      "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap"
+    ],
+    "domElements": 118,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "html": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>$SPECU | Professional Speculation</title>\n    \n    <!-- Favicon -->\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"img/favicon.ico\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"img/favicon.ico\">\n    <link rel=\"shortcut icon\" href=\"img/favicon.ico\">\n    \n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600&amp;display=swap\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: wss:; connect-src 'self' https: wss: data: blob: https://*.walletconnect.org https://*.walletconnect.com https://*.uniswap.org; frame-src 'self' https: data: https://*.uniswap.org https://*.walletconnect.com;\">\n</head>\n<body>\n<!-- Market Data Bar -->\n<div class=\"market-bar\">\n    <div class=\"wrapper\">\n        <div class=\"ticker-wrap\">\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$BTC</span>\n                <span class=\"price\" id=\"btc-price\">$112,165.65</span>\n                <span class=\"change negative\" id=\"btc-change\">-2.89%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$ETH</span>\n                <span class=\"price\" id=\"eth-price\">$4,677.60</span>\n                <span class=\"change negative\" id=\"eth-change\">-2.75%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$SPECU</span>\n                <span class=\"price\" id=\"specu-price\">$0.05693</span>\n                <span class=\"change positive\" id=\"specu-change\">+1.39%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$PARADOX</span>\n                <span class=\"price\" id=\"paradox-price\">$0.2042</span>\n                <span class=\"change positive\" id=\"paradox-change\">+58.03%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$DEGEN</span>\n                <span class=\"price\" id=\"degen-price\">$0.003636</span>\n                <span class=\"change negative\" id=\"degen-change\">-5.12%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$CLANKER</span>\n                <span class=\"price\" id=\"clanker-price\">$52.79</span>\n                <span class=\"change negative\" id=\"clanker-change\">-1.96%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$LUM</span>\n                <span class=\"price\" id=\"lum-price\">$1.85</span>\n                <span class=\"change negative\" id=\"lum-change\">-12.07%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$BITCOIN</span>\n                <span class=\"price\" id=\"bitcoin-price\">$0.09692</span>\n                <span class=\"change positive\" id=\"bitcoin-change\">+0.99%</span>\n            </div>\n        </div>\n    </div>\n</div>\n\n    <!-- Header -->\n    <header class=\"main-header\">\n        <div class=\"wrapper header-content\">\n            <img src=\"img/logo.png\" alt=\"SPECU\" class=\"logo\">\n            <nav class=\"social-nav\">\n                <a href=\"https://x.com/baseSPECU\" class=\"social-link\" aria-label=\"Twitter\">\n                    <svg viewBox=\"0 0 24 24\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"></path></svg>\n                </a>\n                <a href=\"https://t.me/baseSPECU\" class=\"social-link\" aria-label=\"Telegram\">\n                    <svg viewBox=\"0 0 24 24\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z\"></path></svg>\n                </a>\n                <a href=\"https://dexscreener.com/base/0x459952db263f63c631bb512b13363c5e799b50aa\" class=\"social-link\" aria-label=\"Chart\">\n                    <svg viewBox=\"0 0 24 24\"><path d=\"M3 3v18h18v-2H5V3H3zm4 10l4-4 4 4 4-4\"></path></svg>\n                </a>\n            </nav>\n        </div>\n    </header>\n\n    <!-- Main Content -->\n    <main class=\"main-content\">\n        <div class=\"wrapper\">\n            <!-- Masthead -->\n            <section class=\"masthead\">\n                <h1 class=\"site-title\">$SPECU</h1>\n                <p class=\"site-subtitle\">VOLUME I • ISSUE I • ETERNAL BULL MARKET</p>\n            </section>\n\n            <!-- News Grid -->\n            <div class=\"news-grid\">\n                <article class=\"main-story\">\n                    <div class=\"story-image\">\n                        <img src=\"img/specu.jpg\" alt=\"The Art of Speculation\">\n                    </div>\n                    <h2 class=\"story-title\">The Art of Pure Speculation Returns to Crypto Markets</h2>\n                    <p class=\"story-subtitle\">As markets evolve, one truth remains constant: every trade is speculation</p>\n                    <div class=\"story-content\">\n                        <p>In the ever-evolving landscape of cryptocurrency, a new paradigm emerges. $SPECU represents not just another token, but the very essence of market psychology itself. Every trade, every transaction, and every hold is an act of pure speculation.</p>\n                        <p>The modern crypto trader faces an eternal truth: markets are driven not by fundamentals, but by collective speculation. This is not just an observation - it's a philosophy, a way of life. Those who embrace this truth find themselves at the forefront of a new financial revolution.</p>\n                        <p>Total Supply: 1,000,000 $SPECU tokens represent this pure, unfiltered speculation. No false promises. No roadmaps. Just the raw essence of trading psychology manifested in token form.</p>\n                    </div>\n                </article>\n\n                <aside class=\"side-stories\">\n                    <article class=\"side-story\">\n                        <img src=\"img/psychology.jpg\" alt=\"Market Psychology\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>The Psychology of Speculation</h3>\n                            <p>When you speculate, you become one with the market. The market is you. You are the market. This is the way.</p>\n                        </div>\n                    </article>\n\n                    <article class=\"side-story\">\n                        <img src=\"img/uncertainty.jpg\" alt=\"Market Uncertainty\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>The Only Certainty</h3>\n                            <p>In a world of uncertainty, speculation itself becomes the only constant. Embrace it.</p>\n                        </div>\n                    </article>\n\n                    <article class=\"side-story\">\n                        <img src=\"img/clanker.jpg\" alt=\"Clanker AI\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>Created by Clanker</h3>\n                            <p>Pure speculation manifested by the AI Clanker on Farcaster. A testament to the digital age.</p>\n                        </div>\n                    </article>\n                    <article class=\"side-story\">\n                        <img src=\"img/wallstreet.jpg\" alt=\"Clanker AI\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>Clanker's Wall Street Meme</h3>\n                            <p>Wall Street's new favorite meme for the upcoming Meme SuperCycle. Those speculators man...</p>\n                        </div>\n                    </article>\n                </aside>\n            </div>\n        </div>\n\n        <div class=\"wrapper\">\n            <h2 class=\"section-title\">Speculate</h2>\n            <div class=\"trading-widgets\">\n                <div class=\"widget-container chart-container\">\n                    <h3 class=\"widget-title\">Live Chart</h3>\n                    <div class=\"dexscreener-widget\">\n                        <iframe src=\"https://dexscreener.com/base/0x459952dB263F63C631bB512B13363c5e799b50aa?embed=1&amp;theme=dark&amp;chartHeight=820\" width=\"100%\" height=\"820px\" style=\"border: none;\">\n                        </iframe>\n                    </div>\n                </div>\n                \n                <div class=\"widget-container\">\n                    <h3 class=\"widget-title\">Swap $SPECU</h3>\n                    <div id=\"uniswap-widget\"><iframe src=\"https://app.uniswap.org/swap?chain=base&amp;outputCurrency=0x11d41056ff636107DD710EC4Ea772490A710cDb7&amp;theme=dark&amp;enableWebsocket=true\" allow=\"clipboard-write; web-share; cross-origin-isolated\" sandbox=\"allow-same-origin allow-scripts allow-popups allow-forms allow-modals\" loading=\"lazy\" style=\"height: 820px; width: 100%; border: 0px;\"></iframe></div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"wrapper\">\n            <div class=\"disclaimer\">\n                <h4 class=\"disclaimer-title\">Disclaimer</h4>\n                <p>Fair launch token created by AI.</p>\n                <br>\n                <p>$SPECU is pure speculation. No utility. No roadmap. No promises. Just the raw essence of market psychology. \n                Remember: this is not financial advice - it's financial entertainment. Past performance does not guarantee future results. \n                Only speculate with what you can afford to lose.</p>\n            </div>\n        </div>\n    </main>\n\n    <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>\n    <script src=\"price-fetcher.js\"></script>\n    <script>\n        const uniswapWidget = document.createElement('iframe');\n        uniswapWidget.src = `https://app.uniswap.org/swap?chain=base&outputCurrency=0x11d41056ff636107DD710EC4Ea772490A710cDb7&theme=dark&enableWebsocket=true`;\n        uniswapWidget.style.height = \"820px\";\n        uniswapWidget.style.width = \"100%\";\n        uniswapWidget.style.border = \"0\";\n        uniswapWidget.allow = \"clipboard-write; web-share; cross-origin-isolated\";\n        uniswapWidget.sandbox = \"allow-same-origin allow-scripts allow-popups allow-forms allow-modals\";\n        uniswapWidget.loading = \"lazy\";\n        document.getElementById('uniswap-widget').appendChild(uniswapWidget);\n    </script>\n\n</body></html>",
+    "headers": {
+      "accept-ranges": "bytes",
+      "access-control-allow-origin": "*",
+      "age": "1189283",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "content-disposition": "inline",
+      "content-encoding": "br",
+      "content-length": "3295",
+      "content-type": "text/html; charset=utf-8",
+      "date": "Mon, 25 Aug 2025 00:43:06 GMT",
+      "etag": "\"0b80c47f3c95960a1d74795542ca5094\"",
+      "last-modified": "Mon, 11 Aug 2025 06:21:42 GMT",
+      "server": "Vercel",
+      "strict-transport-security": "max-age=63072000",
+      "x-vercel-cache": "HIT",
+      "x-vercel-id": "arn1::2gqmg-1756082586578-292d7b1663af"
+    },
+    "statusCode": 200,
+    "loadTime": 0,
+    "screenshot": null,
+    "finalUrl": "https://speculation.art/"
+  },
+  "aiInsights": {
+    "summary": "The website has a high accessibility score, indicating that it is user-friendly and can be accessed by people with disabilities. However, the security score is extremely low, suggesting that there may be potential vulnerabilities that could be exploited. The performance and SEO scores are not available, making it difficult to assess the website's speed and search engine optimization. The technology used to build the website is not specified.",
+    "technicalInsights": {
+      "strengths": [
+        "High accessibility score, indicating a user-friendly interface"
+      ],
+      "weaknesses": [
+        "Low security score, indicating potential vulnerabilities",
+        "Unknown performance score, making it difficult to assess website speed",
+        "Unknown SEO score, making it difficult to assess search engine optimization",
+        "Unspecified technology stack"
+      ],
+      "recommendations": [
+        "Improve security measures to protect against potential threats",
+        "Conduct performance testing to assess and improve website speed",
+        "Implement SEO strategies to improve visibility on search engines",
+        "Specify the technology stack used to build the website"
+      ]
+    },
+    "businessInsights": {
+      "opportunities": [
+        "Improving the website's security could increase user trust and potentially lead to higher traffic",
+        "Improving the website's performance could enhance user experience and potentially increase conversion rates",
+        "Implementing SEO strategies could improve the website's visibility on search engines and potentially increase traffic"
+      ],
+      "risks": [
+        "Potential loss of users due to security vulnerabilities",
+        "Potential loss of users due to poor performance",
+        "Potential loss of visibility on search engines due to lack of SEO"
+      ],
+      "recommendations": [
+        "Invest in improving the website's security to increase user trust",
+        "Invest in performance optimization to enhance user experience",
+        "Implement SEO strategies to increase visibility on search engines"
+      ]
+    },
+    "recommendations": [
+      "Improve security measures to protect against potential threats",
+      "Conduct performance testing to assess and improve website speed",
+      "Implement SEO strategies to improve visibility on search engines",
+      "Specify the technology stack used to build the website",
+      "Invest in improving the website's security to increase user trust",
+      "Invest in performance optimization to enhance user experience",
+      "Implement SEO strategies to increase visibility on search engines"
+    ],
+    "priority": "high",
+    "confidence": 0.85,
+    "provider": "ai-generated"
+  },
+  "scores": {
+    "performance": 99,
+    "seo": 91,
+    "accessibility": 89,
+    "security": 17,
+    "bestPractices": 74,
+    "overall": 79
+  },
+  "raw": {
+    "url": "https://speculation.art/",
+    "analyzedAt": "2025-08-25T00:43:24.861Z",
+    "analysisTime": 18576,
+    "basic": {
+      "title": "$SPECU | Professional Speculation",
+      "description": "",
+      "keywords": "",
+      "lang": "en",
+      "charset": "UTF-8",
+      "ogTitle": "",
+      "ogDescription": "",
+      "ogImage": "",
+      "ogUrl": "",
+      "twitterCard": "",
+      "twitterTitle": "",
+      "twitterDescription": "",
+      "hasStructuredData": false,
+      "structuredDataCount": 0,
+      "headingStructure": {
+        "h1": {
+          "count": 1,
+          "texts": [
+            "$SPECU"
+          ]
+        },
+        "h2": {
+          "count": 2,
+          "texts": [
+            "The Art of Pure Speculation Returns to Crypto Markets",
+            "Speculate"
+          ]
+        },
+        "h3": {
+          "count": 6,
+          "texts": [
+            "The Psychology of Speculation",
+            "The Only Certainty",
+            "Created by Clanker",
+            "Clanker's Wall Street Meme",
+            "Live Chart"
+          ]
+        },
+        "h4": {
+          "count": 1,
+          "texts": [
+            "Disclaimer"
+          ]
+        },
+        "h5": {
+          "count": 0,
+          "texts": []
+        },
+        "h6": {
+          "count": 0,
+          "texts": []
+        }
+      },
+      "imageCount": 6,
+      "linkCount": 3,
+      "formCount": 0,
+      "wordCount": 295,
+      "paragraphCount": 11,
+      "externalScripts": [
+        "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      ],
+      "externalStyles": [
+        "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap"
+      ],
+      "domElements": 118,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "html": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>$SPECU | Professional Speculation</title>\n    \n    <!-- Favicon -->\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"img/favicon.ico\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"img/favicon.ico\">\n    <link rel=\"shortcut icon\" href=\"img/favicon.ico\">\n    \n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600&amp;display=swap\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: wss:; connect-src 'self' https: wss: data: blob: https://*.walletconnect.org https://*.walletconnect.com https://*.uniswap.org; frame-src 'self' https: data: https://*.uniswap.org https://*.walletconnect.com;\">\n</head>\n<body>\n<!-- Market Data Bar -->\n<div class=\"market-bar\">\n    <div class=\"wrapper\">\n        <div class=\"ticker-wrap\">\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$BTC</span>\n                <span class=\"price\" id=\"btc-price\">$112,165.65</span>\n                <span class=\"change negative\" id=\"btc-change\">-2.89%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$ETH</span>\n                <span class=\"price\" id=\"eth-price\">$4,677.60</span>\n                <span class=\"change negative\" id=\"eth-change\">-2.75%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$SPECU</span>\n                <span class=\"price\" id=\"specu-price\">$0.05693</span>\n                <span class=\"change positive\" id=\"specu-change\">+1.39%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$PARADOX</span>\n                <span class=\"price\" id=\"paradox-price\">$0.2042</span>\n                <span class=\"change positive\" id=\"paradox-change\">+58.03%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$DEGEN</span>\n                <span class=\"price\" id=\"degen-price\">$0.003636</span>\n                <span class=\"change negative\" id=\"degen-change\">-5.12%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$CLANKER</span>\n                <span class=\"price\" id=\"clanker-price\">$52.79</span>\n                <span class=\"change negative\" id=\"clanker-change\">-1.96%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$LUM</span>\n                <span class=\"price\" id=\"lum-price\">$1.85</span>\n                <span class=\"change negative\" id=\"lum-change\">-12.07%</span>\n            </div>\n            <div class=\"ticker-item\">\n                <span class=\"coin\">$BITCOIN</span>\n                <span class=\"price\" id=\"bitcoin-price\">$0.09692</span>\n                <span class=\"change positive\" id=\"bitcoin-change\">+0.99%</span>\n            </div>\n        </div>\n    </div>\n</div>\n\n    <!-- Header -->\n    <header class=\"main-header\">\n        <div class=\"wrapper header-content\">\n            <img src=\"img/logo.png\" alt=\"SPECU\" class=\"logo\">\n            <nav class=\"social-nav\">\n                <a href=\"https://x.com/baseSPECU\" class=\"social-link\" aria-label=\"Twitter\">\n                    <svg viewBox=\"0 0 24 24\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"></path></svg>\n                </a>\n                <a href=\"https://t.me/baseSPECU\" class=\"social-link\" aria-label=\"Telegram\">\n                    <svg viewBox=\"0 0 24 24\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z\"></path></svg>\n                </a>\n                <a href=\"https://dexscreener.com/base/0x459952db263f63c631bb512b13363c5e799b50aa\" class=\"social-link\" aria-label=\"Chart\">\n                    <svg viewBox=\"0 0 24 24\"><path d=\"M3 3v18h18v-2H5V3H3zm4 10l4-4 4 4 4-4\"></path></svg>\n                </a>\n            </nav>\n        </div>\n    </header>\n\n    <!-- Main Content -->\n    <main class=\"main-content\">\n        <div class=\"wrapper\">\n            <!-- Masthead -->\n            <section class=\"masthead\">\n                <h1 class=\"site-title\">$SPECU</h1>\n                <p class=\"site-subtitle\">VOLUME I • ISSUE I • ETERNAL BULL MARKET</p>\n            </section>\n\n            <!-- News Grid -->\n            <div class=\"news-grid\">\n                <article class=\"main-story\">\n                    <div class=\"story-image\">\n                        <img src=\"img/specu.jpg\" alt=\"The Art of Speculation\">\n                    </div>\n                    <h2 class=\"story-title\">The Art of Pure Speculation Returns to Crypto Markets</h2>\n                    <p class=\"story-subtitle\">As markets evolve, one truth remains constant: every trade is speculation</p>\n                    <div class=\"story-content\">\n                        <p>In the ever-evolving landscape of cryptocurrency, a new paradigm emerges. $SPECU represents not just another token, but the very essence of market psychology itself. Every trade, every transaction, and every hold is an act of pure speculation.</p>\n                        <p>The modern crypto trader faces an eternal truth: markets are driven not by fundamentals, but by collective speculation. This is not just an observation - it's a philosophy, a way of life. Those who embrace this truth find themselves at the forefront of a new financial revolution.</p>\n                        <p>Total Supply: 1,000,000 $SPECU tokens represent this pure, unfiltered speculation. No false promises. No roadmaps. Just the raw essence of trading psychology manifested in token form.</p>\n                    </div>\n                </article>\n\n                <aside class=\"side-stories\">\n                    <article class=\"side-story\">\n                        <img src=\"img/psychology.jpg\" alt=\"Market Psychology\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>The Psychology of Speculation</h3>\n                            <p>When you speculate, you become one with the market. The market is you. You are the market. This is the way.</p>\n                        </div>\n                    </article>\n\n                    <article class=\"side-story\">\n                        <img src=\"img/uncertainty.jpg\" alt=\"Market Uncertainty\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>The Only Certainty</h3>\n                            <p>In a world of uncertainty, speculation itself becomes the only constant. Embrace it.</p>\n                        </div>\n                    </article>\n\n                    <article class=\"side-story\">\n                        <img src=\"img/clanker.jpg\" alt=\"Clanker AI\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>Created by Clanker</h3>\n                            <p>Pure speculation manifested by the AI Clanker on Farcaster. A testament to the digital age.</p>\n                        </div>\n                    </article>\n                    <article class=\"side-story\">\n                        <img src=\"img/wallstreet.jpg\" alt=\"Clanker AI\" class=\"story-image\">\n                        <div class=\"story-content\">\n                            <h3>Clanker's Wall Street Meme</h3>\n                            <p>Wall Street's new favorite meme for the upcoming Meme SuperCycle. Those speculators man...</p>\n                        </div>\n                    </article>\n                </aside>\n            </div>\n        </div>\n\n        <div class=\"wrapper\">\n            <h2 class=\"section-title\">Speculate</h2>\n            <div class=\"trading-widgets\">\n                <div class=\"widget-container chart-container\">\n                    <h3 class=\"widget-title\">Live Chart</h3>\n                    <div class=\"dexscreener-widget\">\n                        <iframe src=\"https://dexscreener.com/base/0x459952dB263F63C631bB512B13363c5e799b50aa?embed=1&amp;theme=dark&amp;chartHeight=820\" width=\"100%\" height=\"820px\" style=\"border: none;\">\n                        </iframe>\n                    </div>\n                </div>\n                \n                <div class=\"widget-container\">\n                    <h3 class=\"widget-title\">Swap $SPECU</h3>\n                    <div id=\"uniswap-widget\"><iframe src=\"https://app.uniswap.org/swap?chain=base&amp;outputCurrency=0x11d41056ff636107DD710EC4Ea772490A710cDb7&amp;theme=dark&amp;enableWebsocket=true\" allow=\"clipboard-write; web-share; cross-origin-isolated\" sandbox=\"allow-same-origin allow-scripts allow-popups allow-forms allow-modals\" loading=\"lazy\" style=\"height: 820px; width: 100%; border: 0px;\"></iframe></div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"wrapper\">\n            <div class=\"disclaimer\">\n                <h4 class=\"disclaimer-title\">Disclaimer</h4>\n                <p>Fair launch token created by AI.</p>\n                <br>\n                <p>$SPECU is pure speculation. No utility. No roadmap. No promises. Just the raw essence of market psychology. \n                Remember: this is not financial advice - it's financial entertainment. Past performance does not guarantee future results. \n                Only speculate with what you can afford to lose.</p>\n            </div>\n        </div>\n    </main>\n\n    <script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>\n    <script src=\"price-fetcher.js\"></script>\n    <script>\n        const uniswapWidget = document.createElement('iframe');\n        uniswapWidget.src = `https://app.uniswap.org/swap?chain=base&outputCurrency=0x11d41056ff636107DD710EC4Ea772490A710cDb7&theme=dark&enableWebsocket=true`;\n        uniswapWidget.style.height = \"820px\";\n        uniswapWidget.style.width = \"100%\";\n        uniswapWidget.style.border = \"0\";\n        uniswapWidget.allow = \"clipboard-write; web-share; cross-origin-isolated\";\n        uniswapWidget.sandbox = \"allow-same-origin allow-scripts allow-popups allow-forms allow-modals\";\n        uniswapWidget.loading = \"lazy\";\n        document.getElementById('uniswap-widget').appendChild(uniswapWidget);\n    </script>\n\n</body></html>",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "1189283",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline",
+        "content-encoding": "br",
+        "content-length": "3295",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 25 Aug 2025 00:43:06 GMT",
+        "etag": "\"0b80c47f3c95960a1d74795542ca5094\"",
+        "last-modified": "Mon, 11 Aug 2025 06:21:42 GMT",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "arn1::2gqmg-1756082586578-292d7b1663af"
+      },
+      "statusCode": 200,
+      "loadTime": 0,
+      "screenshot": null,
+      "finalUrl": "https://speculation.art/"
+    },
+    "lighthouse": {
+      "performance": 99,
+      "seo": 91,
+      "accessibility": 89,
+      "bestPractices": 74,
+      "metrics": {
+        "firstContentfulPaint": 594.7891000000001,
+        "largestContentfulPaint": 901.5268000000002,
+        "firstInputDelay": 16,
+        "cumulativeLayoutShift": 0.003953822782593468,
+        "speedIndex": 594.7891000000001,
+        "totalBlockingTime": 0,
+        "timeToInteractive": 901.5268000000003,
+        "serverResponseTime": 43.22
+      },
+      "opportunities": [
+        {
+          "audit": "errors-in-console",
+          "title": "Browser errors were logged to the console",
+          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+          "score": 0,
+          "savings": 0
+        },
+        {
+          "audit": "third-party-cookies",
+          "title": "Uses third-party cookies",
+          "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+          "score": 0,
+          "savings": 0,
+          "displayValue": "4 cookies found"
+        },
+        {
+          "audit": "unsized-images",
+          "title": "Image elements do not have explicit `width` and `height`",
+          "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+          "score": 0.5,
+          "savings": 0
+        },
+        {
+          "audit": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+          "score": 0,
+          "savings": 0
+        },
+        {
+          "audit": "frame-title",
+          "title": "`<frame>` or `<iframe>` elements do not have a title",
+          "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more about frame titles](https://dequeuniversity.com/rules/axe/4.10/frame-title).",
+          "score": 0,
+          "savings": 0
+        },
+        {
+          "audit": "uses-long-cache-ttl",
+          "title": "Serve static assets with an efficient cache policy",
+          "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+          "score": 0.5,
+          "savings": 4962.4,
+          "displayValue": "3 resources found"
+        },
+        {
+          "audit": "total-byte-weight",
+          "title": "Avoid enormous network payloads",
+          "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+          "score": 0.5,
+          "savings": 3459390,
+          "displayValue": "Total size was 3,378 KiB"
+        },
+        {
+          "audit": "modern-image-formats",
+          "title": "Serve images in next-gen formats",
+          "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).",
+          "score": 0.5,
+          "savings": 20,
+          "displayValue": "Est savings of 153 KiB"
+        },
+        {
+          "audit": "uses-responsive-images",
+          "title": "Properly size images",
+          "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).",
+          "score": 0,
+          "savings": 50,
+          "displayValue": "Est savings of 459 KiB"
+        },
+        {
+          "audit": "legacy-javascript",
+          "title": "Avoid serving legacy JavaScript to modern browsers",
+          "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+          "score": 0.5,
+          "savings": 0,
+          "displayValue": "Est savings of 1 KiB"
+        },
+        {
+          "audit": "inspector-issues",
+          "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+          "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+          "score": 0,
+          "savings": 0
+        },
+        {
+          "audit": "meta-description",
+          "title": "Document does not have a meta description",
+          "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+          "score": 0,
+          "savings": 0
+        },
+        {
+          "audit": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "description": "Many navigations are performed by going back to a previous page, or forwards again. The back/forward cache (bfcache) can speed up these return navigations. [Learn more about the bfcache](https://developer.chrome.com/docs/lighthouse/performance/bf-cache/)",
+          "score": 0,
+          "savings": 0,
+          "displayValue": "3 failure reasons"
+        }
+      ],
+      "rawLighthouseData": {
+        "fetchTime": "2025-08-25T00:43:12.691Z",
+        "requestedUrl": "https://speculation.art/",
+        "finalUrl": "https://speculation.art/",
+        "lighthouseVersion": "12.8.1",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36",
+        "environment": {
+          "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+          "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36",
+          "benchmarkIndex": 3581,
+          "credits": {
+            "axe-core": "4.10.3"
+          }
+        },
+        "configSettings": {
+          "output": "json",
+          "maxWaitForFcp": 30000,
+          "maxWaitForLoad": 45000,
+          "pauseAfterFcpMs": 1000,
+          "pauseAfterLoadMs": 1000,
+          "networkQuietThresholdMs": 1000,
+          "cpuQuietThresholdMs": 1000,
+          "formFactor": "desktop",
+          "throttling": {
+            "rttMs": 40,
+            "throughputKbps": 10240,
+            "requestLatencyMs": 0,
+            "downloadThroughputKbps": 0,
+            "uploadThroughputKbps": 0,
+            "cpuSlowdownMultiplier": 1
+          },
+          "throttlingMethod": "simulate",
+          "screenEmulation": {
+            "mobile": false,
+            "width": 1350,
+            "height": 940,
+            "deviceScaleFactor": 1,
+            "disabled": false
+          },
+          "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
+          "auditMode": false,
+          "gatherMode": false,
+          "clearStorageTypes": [
+            "file_systems",
+            "shader_cache",
+            "service_workers",
+            "cache_storage"
+          ],
+          "disableStorageReset": false,
+          "debugNavigation": false,
+          "channel": "node",
+          "usePassiveGathering": false,
+          "disableFullPageScreenshot": false,
+          "skipAboutBlank": false,
+          "blankPage": "about:blank",
+          "ignoreStatusCode": false,
+          "locale": "en-US",
+          "blockedUrlPatterns": null,
+          "additionalTraceCategories": null,
+          "extraHeaders": null,
+          "precomputedLanternData": null,
+          "onlyAudits": null,
+          "onlyCategories": [
+            "performance",
+            "seo",
+            "best-practices",
+            "accessibility"
+          ],
+          "skipAudits": []
+        }
+      }
+    },
+    "comprehensiveSEO": {
+      "technical": {
+        "score": 56,
+        "factors": {
+          "titleOptimization": {
+            "present": true,
+            "length": 33,
+            "optimal": true,
+            "issues": [],
+            "recommendations": []
+          },
+          "metaDescription": {
+            "present": false,
+            "length": 0,
+            "optimal": false,
+            "issues": [
+              "Missing meta description"
+            ],
+            "recommendations": [
+              "Add a compelling meta description"
+            ]
+          },
+          "headingStructure": {
+            "hasH1": true,
+            "h1Count": 1,
+            "hasHierarchy": true,
+            "issues": [],
+            "recommendations": [],
+            "structure": {
+              "h1": {
+                "count": 1,
+                "texts": [
+                  "$SPECU"
+                ]
+              },
+              "h2": {
+                "count": 2,
+                "texts": [
+                  "The Art of Pure Speculation Returns to Crypto Markets",
+                  "Speculate"
+                ]
+              },
+              "h3": {
+                "count": 6,
+                "texts": [
+                  "The Psychology of Speculation",
+                  "The Only Certainty",
+                  "Created by Clanker",
+                  "Clanker's Wall Street Meme",
+                  "Live Chart"
+                ]
+              },
+              "h4": {
+                "count": 1,
+                "texts": [
+                  "Disclaimer"
+                ]
+              },
+              "h5": {
+                "count": 0,
+                "texts": []
+              },
+              "h6": {
+                "count": 0,
+                "texts": []
+              }
+            }
+          },
+          "urlStructure": {
+            "optimal": true,
+            "score": 80
+          },
+          "metaTags": {
+            "optimal": false,
+            "score": 70
+          },
+          "structuredData": {
+            "present": false,
+            "score": 20
+          },
+          "internalLinking": {
+            "score": 60,
+            "linkCount": 3
+          }
+        },
+        "issues": []
+      },
+      "content": {
+        "score": 46,
+        "analysis": {
+          "depth": {
+            "wordCount": 295,
+            "paragraphCount": 11,
+            "adequateDepth": false,
+            "contentRatio": 26.818181818181817,
+            "depthScore": 20,
+            "issues": [
+              "Thin content: only 295 words"
+            ],
+            "recommendations": [
+              "Add more comprehensive content (target: 300+ words)",
+              "Include detailed explanations, examples, and supporting information",
+              "Break content into logical sections with subheadings"
+            ]
+          },
+          "structure": {
+            "score": 55
+          },
+          "uniqueness": {
+            "score": 70
+          },
+          "relevance": {
+            "score": 60
+          },
+          "freshness": {
+            "score": 50
+          }
+        },
+        "issues": []
+      },
+      "onPage": {
+        "score": 65,
+        "factors": {
+          "keywordOptimization": {
+            "score": 50,
+            "recommendations": [
+              "Research and optimize for target keywords"
+            ]
+          },
+          "imageSEO": {
+            "score": 40,
+            "issues": [
+              "Missing alt text analysis"
+            ],
+            "recommendations": [
+              "Add descriptive alt text to all images"
+            ]
+          },
+          "linkProfile": {
+            "score": 55,
+            "internalLinks": 3
+          },
+          "socialSignals": {
+            "score": 30,
+            "hasOpenGraph": false
+          }
+        },
+        "optimizationLevel": "good"
+      },
+      "userExperience": {
+        "score": 60,
+        "signals": {
+          "readability": {
+            "score": 60,
+            "recommendations": [
+              "Improve content readability"
+            ]
+          },
+          "navigation": {
+            "score": 65,
+            "linkCount": 3
+          },
+          "organization": {
+            "score": 60
+          },
+          "mobileOptimization": {
+            "score": 70
+          }
+        },
+        "userFriendliness": "good"
+      },
+      "competitive": {
+        "contentDepthVsIndustry": "thin",
+        "technicalImplementation": "average",
+        "brandSignals": "weak",
+        "trustSignals": "moderate"
+      },
+      "overallScore": 55,
+      "recommendations": [
+        {
+          "priority": "high",
+          "category": "Content",
+          "issue": "Thin content",
+          "action": "Expand content to at least 300 words with valuable, detailed information",
+          "impact": "High - Essential for ranking"
+        },
+        {
+          "priority": "medium",
+          "category": "Technical",
+          "issue": "Meta description",
+          "action": "Write compelling meta description (120-160 characters)",
+          "impact": "Medium - Affects click-through rates"
+        },
+        {
+          "priority": "low",
+          "category": "Enhancement",
+          "issue": "No structured data",
+          "action": "Add relevant schema markup (Organization, Article, etc.)",
+          "impact": "Low - Rich snippets potential"
+        }
+      ],
+      "criticalIssues": [
+        "Thin content - insufficient word count for ranking"
+      ],
+      "opportunities": [
+        "Add structured data for rich snippets",
+        "Expand content for better topical authority"
+      ]
+    },
+    "accessibility": {
+      "score": 84,
+      "issues": {
+        "errors": 20,
+        "warnings": 0,
+        "notices": 0,
+        "total": 20
+      },
+      "details": [
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+          "selector": "#btc-change",
+          "context": "<span class=\"change negative\" id=\"btc-change\">-2.85%</span>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+          "selector": "#eth-change",
+          "context": "<span class=\"change negative\" id=\"eth-change\">-2.63%</span>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+          "selector": "#degen-change",
+          "context": "<span class=\"change negative\" id=\"degen-change\">-5.12%</span>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+          "selector": "#clanker-change",
+          "context": "<span class=\"change negative\" id=\"clanker-change\">-1.96%</span>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.58:1. Recommendation:  change text colour to #ff5e5e.",
+          "selector": "#lum-change",
+          "context": "<span class=\"change negative\" id=\"lum-change\">-12.07%</span>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.34:1. Recommendation:  change text colour to #0b0e15.",
+          "selector": "html > body > main > div:nth-child(1) > section > h1",
+          "context": "<h1 class=\"site-title\">$SPECU</h1>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.22:1. Recommendation:  change text colour to #0a0a0a.",
+          "selector": "html > body > main > div:nth-child(1) > section > p",
+          "context": "<p class=\"site-subtitle\">VOLUME I • ISSUE I • ETERNAL BU...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(1) > div > article > p",
+          "context": "<p class=\"story-subtitle\">As markets evolve, one truth re...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(1) > div > p",
+          "context": "<p>When you speculate, you become ...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(2) > div > p",
+          "context": "<p>In a world of uncertainty, spec...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(3) > div > p",
+          "context": "<p>Pure speculation manifested by ...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(1) > div > aside > article:nth-child(4) > div > p",
+          "context": "<p>Wall Street's new favorite meme...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.34:1. Recommendation:  change text colour to #0b0e15.",
+          "selector": "html > body > main > div:nth-child(2) > h2",
+          "context": "<h2 class=\"section-title\">Speculate</h2>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.47:1. Recommendation:  change text colour to #73767d.",
+          "selector": "html > body > main > div:nth-child(2) > div > div:nth-child(1) > h3",
+          "context": "<h3 class=\"widget-title\">Live Chart</h3>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1",
+          "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+          "selector": "html > body > main > div:nth-child(2) > div > div:nth-child(1) > div > iframe",
+          "context": "<iframe src=\"https://dexscreener.com/base/0x459952dB263F63C631bB512B13363c5e799b50aa?embed=1&amp;theme=dark&amp;chartHeight=820\" width=\"100%\" height=\"820px\" style=\"border: none;\">\n                        </iframe>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.47:1. Recommendation:  change text colour to #73767d.",
+          "selector": "html > body > main > div:nth-child(2) > div > div:nth-child(2) > h3",
+          "context": "<h3 class=\"widget-title\">Swap $SPECU</h3>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle2.Guideline2_4.2_4_1.H64.1",
+          "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+          "selector": "#uniswap-widget > iframe",
+          "context": "<iframe src=\"https://app.uniswap.org/swap?chain=base&amp;outputCurrency=0x11d41056ff636107DD710EC4Ea772490A710cDb7&amp;theme=dark&amp;enableWebsocket=true\" allow=\"clipboard-write; web-share; cross-origin-isolated\" sandbox=\"allow-same-origin allow-scr..."
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.47:1. Recommendation:  change text colour to #73767d.",
+          "selector": "html > body > main > div:nth-child(3) > div > h4",
+          "context": "<h4 class=\"disclaimer-title\">Disclaimer</h4>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(3) > div > p:nth-child(2)",
+          "context": "<p>Fair launch token created by AI...</p>"
+        },
+        {
+          "type": "error",
+          "code": "WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 5.74:1. Recommendation:  change text colour to #595959.",
+          "selector": "html > body > main > div:nth-child(3) > div > p:nth-child(4)",
+          "context": "<p>$SPECU is pure speculation. No ...</p>"
+        }
+      ]
+    },
+    "technologies": {
+      "technologies": [
+        {
+          "name": "jsDelivr",
+          "categories": [
+            "CDN"
+          ],
+          "version": ".",
+          "confidence": 50,
+          "website": null,
+          "source": "custom-patterns"
+        },
+        {
+          "name": "Google Fonts",
+          "categories": [
+            "CDN"
+          ],
+          "version": "18",
+          "confidence": 50,
+          "website": null,
+          "source": "custom-patterns"
+        },
+        {
+          "name": "Node.js",
+          "categories": [
+            "Programming Languages"
+          ],
+          "version": "18",
+          "confidence": 50,
+          "website": null,
+          "source": "custom-patterns"
+        }
+      ],
+      "categories": [
+        "CDN",
+        "Programming Languages"
+      ],
+      "count": 3,
+      "stats": {
+        "total": 3,
+        "byCategory": {
+          "CDN": 2,
+          "Programming Languages": 1
+        },
+        "byConfidence": {
+          "high": 0,
+          "medium": 3,
+          "low": 0
+        },
+        "topTechnologies": [
+          {
+            "name": "jsDelivr",
+            "confidence": 50
+          },
+          {
+            "name": "Google Fonts",
+            "confidence": 50
+          },
+          {
+            "name": "Node.js",
+            "confidence": 50
+          }
+        ]
+      }
+    },
+    "security": {
+      "isHttps": true,
+      "score": 17,
+      "headers": {
+        "strict-transport-security": true,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": false,
+        "x-xss-protection": false,
+        "referrer-policy": false
+      },
+      "rawHeaders": {
+        "strict-transport-security": "max-age=63072000",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "arn1::lkfnn-1756082591727-b07f8e4b7154"
+      },
+      "recommendations": [
+        "Implement Content Security Policy to prevent XSS attacks",
+        "Add X-Frame-Options header to prevent clickjacking",
+        "Add X-Content-Type-Options header to prevent MIME sniffing"
+      ]
+    },
+    "scores": {
+      "performance": 99,
+      "seo": 91,
+      "accessibility": 89,
+      "security": 17,
+      "bestPractices": 74,
+      "overall": 79
+    }
+  }
+}
