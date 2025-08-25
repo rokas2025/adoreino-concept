@@ -44,6 +44,27 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // BYPASS VERCEL MIME ISSUE: Load main script dynamically
+      window.addEventListener('DOMContentLoaded', function() {
+        fetch('/src/main.tsx')
+          .then(response => response.text())
+          .then(code => {
+            console.log('[BYPASS] Got main.tsx source, creating script element')
+            const script = document.createElement('script')
+            script.type = 'module'
+            script.textContent = code
+            document.head.appendChild(script)
+          })
+          .catch(error => {
+            console.error('[BYPASS] Failed to load main.tsx:', error)
+            // Fallback: try the regular method
+            const script = document.createElement('script')
+            script.type = 'module'
+            script.src = '/src/main.tsx'
+            document.head.appendChild(script)
+          })
+      })
+    </script>
   </body>
 </html> 
