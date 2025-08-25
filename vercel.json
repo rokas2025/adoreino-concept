@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:vercel",
+  "buildCommand": "node scripts/diagnose-and-build.js",
   "outputDirectory": "dist",
   "framework": "vite",
   "functions": {
