@@ -9,6 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function(){
+        try {
+          console.info('[HTML] location', window.location.href)
+          console.info('[HTML] userAgent', navigator.userAgent)
+          console.info('[HTML] supports module?', typeof document.createElement('script').noModule === 'boolean')
+        } catch (e) {
+          console.error('[HTML] early error', e)
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
